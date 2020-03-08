@@ -19,15 +19,26 @@
   },
   "homepage": "https://github.com/adammanderson/covid#readme",
   "dependencies": {
+    "@types/lodash-es": "^4.17.3",
+    "lodash": "^4.17.15",
     "next": "^9.2.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-feather": "^2.0.3",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",
     "@types/react": "^16.9.23",
     "@types/theme-ui": "^0.3.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "typescript": "^3.8.3"
   }
 }

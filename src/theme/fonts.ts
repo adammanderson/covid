@@ -1,5 +1,5 @@
 export default {
-  body: 'system-ui, sans-serif',
-  heading: '"Avenir Next", sans-serif',
+  body: '"Space Mono", monospace',
+  heading: '"Space Mono", monospace',
   monospace: 'Menlo, monospace',
-}
+};
