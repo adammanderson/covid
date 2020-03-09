@@ -19,17 +19,22 @@
   },
   "homepage": "https://github.com/adammanderson/covid#readme",
   "dependencies": {
+    "@types/leaflet": "^1.5.10",
     "@types/lodash-es": "^4.17.3",
+    "@types/react-leaflet": "^2.5.1",
     "@types/recharts": "^1.8.7",
     "date-fns": "^2.10.0",
     "framer-motion": "^1.9.1",
+    "leaflet": "^1.6.0",
     "lodash": "^4.17.15",
     "next": "^9.2.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-feather": "^2.0.3",
+    "react-leaflet": "^2.6.1",
     "recharts": "^2.0.0-beta.1",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "topojson": "^3.0.2"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",

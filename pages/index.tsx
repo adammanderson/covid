@@ -10,6 +10,7 @@ import {
   Header,
   Bar,
   Notice,
+  Mapper,
 } from '../src/components';
 import dataImport from '../data';
 import { groupRegionByDateName, groupAllRegionsByDate } from '../src/helpers';
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
       >
         <Flex
           sx={{
+            order: [2, 1],
             flexDirection: 'column',
             flexBasis: '350px',
           }}
@@ -72,8 +74,12 @@ const Home: NextPage = () => {
             legend={false}
           />
         </Flex>
+        <Mapper
+          regionData={regions}
+        />
         <Flex
           sx={{
+            order: [3, 3],
             flexDirection: 'column',
             flexBasis: '350px',
           }}
@@ -90,13 +96,16 @@ const Home: NextPage = () => {
       </Flex>
       <Flex
         sx={{
+          order: [4],
           flexBasis: '30px',
         }}
       >
         <Notice>
           <Text variant="small">
-            Data sources:
-            Public Health England (PHE)
+            This app sources data from
+            Public Health England (PHE), UK Government.
+            Do not rely on this data for medical guidance.
+            Always raise health concerns with your qualified GP.
           </Text>
         </Notice>
       </Flex>

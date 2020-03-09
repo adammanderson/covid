@@ -11,7 +11,7 @@ const ListItem: React.SFC = ({
       px: 3,
       transition: 'all 200ms ease-in-out 0s',
       ':hover': {
-        bg: 'background',
+        bg: 'backgroundMuted',
         cursor: 'crosshair',
       },
     }}

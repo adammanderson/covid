@@ -1,7 +1,7 @@
 export default {
   text: '#fff',
-  background: '#1d2127',
-  backgroundMuted: '#21262d',
+  background: '#011017',
+  backgroundMuted: '#052a3c',
   primary: '#ff4949',
   secondary: '#E3A30B',
   muted: '#dfdfdf',

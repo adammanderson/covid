@@ -7,4 +7,5 @@ export * from './Totaler';
 export * from './Header';
 export * from './Bar';
 export * from './Notice';
+export * from './Mapper';
 export { default as Icons } from './Icons';
