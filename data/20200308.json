@@ -1,14 +1,20 @@
 {
   "source": "Public Health England (PHE)",
-  "created": "2012-04-23T18:25:43.511Z",
+  "created": "2020-03-07T14:00:00.511Z",
   "data": [
+    {
+      "authority": "Unattributed",
+      "confirmed": 0,
+      "recovered": 18,
+      "dead": 2
+    },
     {
       "authority": "Barking and Dagenham",
       "confirmed": 0
     },
     {
       "authority": "Barnet",
-      "confirmed": 3
+      "confirmed": 4
     },
     {
       "authority": "Barnsley",
@@ -40,11 +46,11 @@
     },
     {
       "authority": "Bolton",
-      "confirmed": 1
+      "confirmed": 2
     },
     {
-      "authority": "Bournemouth",
-      "confirmed": 0
+      "authority": "Bournemouth, Christchurch and Poole",
+      "confirmed": 2
     },
     {
       "authority": "Bracknell Forest",
@@ -56,7 +62,7 @@
     },
     {
       "authority": "Brent",
-      "confirmed": 1
+      "confirmed": 3
     },
     {
       "authority": "Brighton and Hove",
@@ -64,7 +70,7 @@
     },
     {
       "authority": "Bristol, City of",
-      "confirmed": 1
+      "confirmed": 2
     },
     {
       "authority": "Bromley",
@@ -76,7 +82,7 @@
     },
     {
       "authority": "Bury",
-      "confirmed": 4
+      "confirmed": 3
     },
     {
       "authority": "Calderdale",
@@ -103,8 +109,8 @@
       "confirmed": 0
     },
     {
-      "authority": "Cornwall and Isles of Scilly",
-      "confirmed": 2
+      "authority": "Cornwall",
+      "confirmed": 3
     },
     {
       "authority": "County Durham",
@@ -112,7 +118,7 @@
     },
     {
       "authority": "Coventry",
-      "confirmed": 1
+      "confirmed": 3
     },
     {
       "authority": "Croydon",
@@ -120,7 +126,7 @@
     },
     {
       "authority": "Cumbria",
-      "confirmed": 4
+      "confirmed": 5
     },
     {
       "authority": "Darlington",
@@ -132,11 +138,11 @@
     },
     {
       "authority": "Derbyshire",
-      "confirmed": 3
+      "confirmed": 4
     },
     {
       "authority": "Devon",
-      "confirmed": 10
+      "confirmed": 12
     },
     {
       "authority": "Doncaster",
@@ -168,7 +174,7 @@
     },
     {
       "authority": "Essex",
-      "confirmed": 3
+      "confirmed": 5
     },
     {
       "authority": "Gateshead",
@@ -183,7 +189,7 @@
       "confirmed": 0
     },
     {
-      "authority": "Hackney and City of London",
+      "authority": "Hackney",
       "confirmed": 2
     },
     {
@@ -192,11 +198,11 @@
     },
     {
       "authority": "Hammersmith and Fulham",
-      "confirmed": 1
+      "confirmed": 2
     },
     {
       "authority": "Hampshire",
-      "confirmed": 2
+      "confirmed": 8
     },
     {
       "authority": "Haringey",
@@ -220,7 +226,7 @@
     },
     {
       "authority": "Hertfordshire",
-      "confirmed": 8
+      "confirmed": 13
     },
     {
       "authority": "Hillingdon",
@@ -240,11 +246,11 @@
     },
     {
       "authority": "Kensington and Chelsea",
-      "confirmed": 6
+      "confirmed": 8
     },
     {
       "authority": "Kent",
-      "confirmed": 2
+      "confirmed": 4
     },
     {
       "authority": "Kingston upon Hull, City of",
@@ -264,11 +270,11 @@
     },
     {
       "authority": "Lambeth",
-      "confirmed": 2
+      "confirmed": 3
     },
     {
       "authority": "Lancashire",
-      "confirmed": 2
+      "confirmed": 4
     },
     {
       "authority": "Leeds",
@@ -284,7 +290,7 @@
     },
     {
       "authority": "Lewisham",
-      "confirmed": 2
+      "confirmed": 3
     },
     {
       "authority": "Lincolnshire",
@@ -292,7 +298,7 @@
     },
     {
       "authority": "Liverpool",
-      "confirmed": 3
+      "confirmed": 4
     },
     {
       "authority": "Luton",
@@ -352,7 +358,7 @@
     },
     {
       "authority": "Northamptonshire",
-      "confirmed": 2
+      "confirmed": 4
     },
     {
       "authority": "Northumberland",
@@ -372,7 +378,7 @@
     },
     {
       "authority": "Oxfordshire",
-      "confirmed": 4
+      "confirmed": 5
     },
     {
       "authority": "Peterborough",
@@ -380,10 +386,6 @@
     },
     {
       "authority": "Plymouth",
-      "confirmed": 0
-    },
-    {
-      "authority": "Poole",
       "confirmed": 0
     },
     {
@@ -448,7 +450,7 @@
     },
     {
       "authority": "Somerset",
-      "confirmed": 1
+      "confirmed": 2
     },
     {
       "authority": "South Gloucestershire",
@@ -468,7 +470,7 @@
     },
     {
       "authority": "Southwark",
-      "confirmed": 1
+      "confirmed": 3
     },
     {
       "authority": "St. Helens",
@@ -500,7 +502,7 @@
     },
     {
       "authority": "Surrey",
-      "confirmed": 4
+      "confirmed": 5
     },
     {
       "authority": "Sutton",
@@ -508,11 +510,11 @@
     },
     {
       "authority": "Swindon",
-      "confirmed": 1
+      "confirmed": 2
     },
     {
       "authority": "Tameside",
-      "confirmed": 0
+      "confirmed": 1
     },
     {
       "authority": "Telford and Wrekin",
@@ -524,11 +526,11 @@
     },
     {
       "authority": "Torbay",
-      "confirmed": 4
+      "confirmed": 6
     },
     {
       "authority": "Tower Hamlets",
-      "confirmed": 0
+      "confirmed": 1
     },
     {
       "authority": "Trafford",
@@ -548,7 +550,7 @@
     },
     {
       "authority": "Wandsworth",
-      "confirmed": 2
+      "confirmed": 3
     },
     {
       "authority": "Warrington",
@@ -556,7 +558,7 @@
     },
     {
       "authority": "Warwickshire",
-      "confirmed": 0
+      "confirmed": 3
     },
     {
       "authority": "West Berkshire",
@@ -568,7 +570,7 @@
     },
     {
       "authority": "Westminster",
-      "confirmed": 2
+      "confirmed": 3
     },
     {
       "authority": "Wigan",
@@ -588,7 +590,7 @@
     },
     {
       "authority": "Wokingham",
-      "confirmed": 2
+      "confirmed": 3
     },
     {
       "authority": "Wolverhampton",
@@ -603,8 +605,8 @@
       "confirmed": 3
     },
     {
-      "authority": "awaiting clarification",
-      "confirmed": 14
+      "authority": "Awaiting confirmation",
+      "confirmed": 20
     }
   ]
 }

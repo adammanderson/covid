@@ -1,6 +1,7 @@
 export { default as Card } from './Card';
 
 export interface CardProps {
-  title: string;
+  children: React.ReactNode;
+  title?: string;
   action?: React.ReactNode;
 }

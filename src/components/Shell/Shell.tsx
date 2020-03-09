@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import * as React from 'react';
 import Head from 'next/head';
-import { ThemeProvider } from 'theme-ui';
+import { jsx, ThemeProvider } from 'theme-ui';
 import theme from '../../theme';
 
 const Shell: React.FC = ({
@@ -14,7 +15,13 @@ const Shell: React.FC = ({
         rel="stylesheet"
       />
     </Head>
-    {children}
+    <div
+      sx={{
+        p: 10,
+      }}
+    >
+      {children}
+    </div>
   </ThemeProvider>
 );
 

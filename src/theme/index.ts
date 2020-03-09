@@ -5,14 +5,16 @@ import text from './text';
 import buttons from './buttons';
 import styles from './styles';
 
-export default {
+const theme = {
   cards,
   colors,
   fonts,
   text,
   buttons,
   styles,
-  borders: ['1px solid #9E9E9E'],
-  fontSizes: [13, 16, 22, 26],
+  borders: ['1px solid #9E9E9E', '1px solid #3F4040'],
+  fontSizes: [13, 16, 22, 26, 32, 38],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 };
+
+export default theme;

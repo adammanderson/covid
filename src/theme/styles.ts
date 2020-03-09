@@ -3,10 +3,10 @@ import scrollbar from './scrollbar';
 export default {
   root: {
     fontFamily: 'body',
-    fontWeight: 'body',
+    fontWeight: 'normal',
     fontSize: 1,
-    '-webkit-font-smoothing': 'antialiased',
-    '-moz-osx-font-smoothing': 'grayscale',
+    webkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
   },
   ...scrollbar,
 };

@@ -20,6 +20,8 @@
   "homepage": "https://github.com/adammanderson/covid#readme",
   "dependencies": {
     "@types/lodash-es": "^4.17.3",
+    "date-fns": "^2.10.0",
+    "framer-motion": "^1.9.1",
     "lodash": "^4.17.15",
     "next": "^9.2.2",
     "react": "^16.13.0",
