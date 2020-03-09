@@ -14,8 +14,14 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({
   children,
   title,
   action,
+  fixed,
+  centered,
 }, ref) => (
-  <TCard>
+  <TCard
+    sx={{
+      flexGrow: fixed ? 0 : 1,
+    }}
+  >
     <Corners />
     {title && (
       <Flex
@@ -34,7 +40,13 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({
     <div
       ref={ref}
       sx={{
-        overflow: 'auto',
+        flex: fixed ? '1 1 auto' : ['1 1 auto', '1 1 0'],
+        maxHeight: fixed || centered ? 'auto' : 320,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: centered ? 'flex-end' : 'flex-start',
+        overflowY: centered ? 'hidden' : 'auto',
+        overflowX: 'hidden',
         scrollBehavior: 'smooth',
         ...scrollbar,
       }}

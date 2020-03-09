@@ -4,4 +4,6 @@ export interface CardProps {
   children: React.ReactNode;
   title?: string;
   action?: React.ReactNode;
+  fixed?: boolean;
+  centered?: boolean;
 }

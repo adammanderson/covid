@@ -1,6 +1,7 @@
 export default {
   heading: {
     letterSpacing: 2,
+    lineHeight: 1.2,
     color: 'text',
     fontWeight: 'bold',
     fontSize: [1, 2],
@@ -20,14 +21,14 @@ export default {
     pr: 2,
   },
   large: {
-    fontSize: [4, 5],
+    fontSize: [3, 4],
     fontWeight: 'bold',
   },
   upper: {
     textTransform: 'uppercase',
     color: 'muted',
-    fontSize: [0, 1],
-    lineHeight: 1.4,
-    letterSpacing: 2,
+    fontSize: '0.75em',
+    lineHeight: 1,
+    letterSpacing: 1,
   },
 };

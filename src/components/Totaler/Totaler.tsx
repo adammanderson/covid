@@ -14,8 +14,8 @@ const TotalerItem = ({ label, value }: TotalerItemProps) => {
       sx={{
         flexFlow: 'column wrap',
         alignItems: 'center',
-        mb: 4,
         px: 4,
+        mb: 3,
         borderRight: 1,
         ':last-of-type': {
           borderRight: 'none',
@@ -50,24 +50,31 @@ const TotalerItem = ({ label, value }: TotalerItemProps) => {
 const Totaler: React.SFC<TotalerProps> = ({
   data,
   title,
-}) => (
-  <Card
-    title={title}
-  >
-    <Flex
-      sx={{
-        justifyContent: 'center',
-      }}
+}) => {
+  const filteredData = data.filter(({ value }) => !!value);
+
+  return (
+    <Card
+      title={title}
+      fixed
     >
-      {data.map(({ label, value }) => (
-        <TotalerItem
-          key={label}
-          label={label}
-          value={value}
-        />
-      ))}
-    </Flex>
-  </Card>
-);
+      <Flex
+        sx={{
+          justifyContent: 'center',
+        }}
+      >
+        {filteredData.length ? filteredData.map(({ label, value }) => (
+          <TotalerItem
+            key={label}
+            label={label}
+            value={value}
+          />
+        )) : (
+          <Text variant="upper" sx={{ p: 3, pt: 0, textAlign: 'center' }}>Data not yet ready</Text>
+        )}
+      </Flex>
+    </Card>
+  );
+};
 
 export default Totaler;

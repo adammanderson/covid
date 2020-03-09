@@ -1,0 +1,40 @@
+{
+  "source": "Public Health England (PHE)",
+  "created": "2020-03-05T14:00:00.511Z",
+  "mortalityRate": 1,
+  "regions": [
+    {
+      "label": "East of England",
+      "confirmed": 8
+    },
+    {
+      "label": "London",
+      "confirmed": 25
+    },
+    {
+      "label": "Midlands",
+      "confirmed": 9
+    },
+    {
+      "label": "North East and Yorkshire",
+      "confirmed": 10
+    },
+    {
+      "label": "North West",
+      "confirmed": 17
+    },
+    {
+      "label": "South East",
+      "confirmed": 17
+    },
+    {
+      "label": "South West",
+      "confirmed": 15
+    },
+    {
+      "label": "To be determined",
+      "confirmed": 4
+    }
+  ],
+  "authorities": []
+}

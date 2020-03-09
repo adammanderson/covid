@@ -3,62 +3,81 @@ import { NextPage } from 'next';
 import { format } from 'date-fns';
 import { Flex } from 'theme-ui';
 import sumBy from 'lodash/sumBy';
-import groupBy from 'lodash/groupBy';
+
 import {
   Shell,
   DataList,
   Totaler,
   Header,
+  Bar,
 } from '../src/components';
 import dataImport from '../data';
+import { groupRegionByDateName, groupAllRegionsByDate } from '../src/helpers';
 
 const Home: NextPage = () => {
-  const { created, data } = dataImport._20200308;
+  const dataArray = Object.values(dataImport);
+  const { created, mortalityRate, authorities, regions } = dataArray[dataArray.length - 2];
   const activeDate = new Date(created);
-  const confirmedData = data.map(({ authority, confirmed }) => ({ key: authority, value: confirmed }));
-  const totalActive = { label: 'active cases', value: sumBy(data, 'confirmed') };
-  const totalRecovered = { label: 'total recovered', value: sumBy(data, 'recovered') };
-  const totalDead = { label: 'dead', value: sumBy(data, 'dead') };
-  const unconfirmedItem = data.find(({ authority }) => authority === 'Awaiting confirmation');
-  const totalUnconfirmed = { label: 'unconfirmed', value: unconfirmedItem?.confirmed };
-  const grouped = groupBy(data, 'confirmed');
-  console.log(grouped);
+  const confirmedByAuthority = authorities.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
+  const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
+  const totalActiveByRegion = { label: 'active cases', value: sumBy(regions, 'confirmed') };
+  const totalDead = { label: 'dead', value: mortalityRate };
+  const regionDataByDateName = groupRegionByDateName(dataImport);
+  const allRegionsByDate = groupAllRegionsByDate(dataImport);
 
   return (
     <Shell>
-      <Flex>
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          flexBasis: '350px',
+        }}
+      >
         <Header
           title="COVID-19 England"
-          subtitle={`// ${format(activeDate, 'EEEE dd LLLL Y, kk:mm')} //`}
+          subtitle={`// ${format(activeDate, 'EEEE dd LLLL Y, kk:mm')}`}
         />
-      </Flex>
-      <Flex>
         <Totaler
           title="Latest cases"
           data={[
-            totalActive,
-            totalRecovered,
-          ]}
-        />
-      </Flex>
-      <Flex>
-        <DataList
-          title="Active cases by authority"
-          data={confirmedData}
-        />
-      </Flex>
-      <Flex>
-        <Totaler
-          title="Mortality"
-          data={[
+            totalActiveByRegion,
             totalDead,
           ]}
         />
-        <Totaler
-          title="awaiting"
-          data={[
-            totalUnconfirmed,
+        <Bar
+          data={regionDataByDateName}
+          fixed
+          lines={[
+            {
+              dataKey: 'active',
+              color: 'yellow',
+            },
+            {
+              dataKey: 'dead',
+              color: 'red',
+            },
           ]}
+        />
+        <Bar
+          title="Cases by region"
+          data={allRegionsByDate}
+          height={295}
+          legend={false}
+        />
+      </Flex>
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          flexBasis: '350px',
+        }}
+      >
+        <DataList
+          title="by region"
+          data={confirmedByRegion}
+        />
+        <DataList
+          title="by authority"
+          data={confirmedByAuthority}
         />
       </Flex>
     </Shell>

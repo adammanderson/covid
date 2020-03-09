@@ -1,611 +1,640 @@
 {
   "source": "Public Health England (PHE)",
-  "created": "2020-03-07T14:00:00.511Z",
-  "data": [
+  "created": "2020-03-08T14:00:00.511Z",
+  "mortalityRate": 2,
+  "regions": [
     {
-      "authority": "Unattributed",
-      "confirmed": 0,
-      "recovered": 18,
-      "dead": 2
+      "label": "East of England",
+      "confirmed": 23
     },
     {
-      "authority": "Barking and Dagenham",
+      "label": "London",
+      "confirmed": 51
+    },
+    {
+      "label": "Midlands",
+      "confirmed": 25
+    },
+    {
+      "label": "North East and Yorkshire",
+      "confirmed": 18
+    },
+    {
+      "label": "North West",
+      "confirmed": 31
+    },
+    {
+      "label": "South East",
+      "confirmed": 41
+    },
+    {
+      "label": "South West",
+      "confirmed": 35
+    },
+    {
+      "label": "To be determined",
+      "confirmed": 22
+    }
+  ],
+  "authorities": [
+    {
+      "label": "Barking and Dagenham",
       "confirmed": 0
     },
     {
-      "authority": "Barnet",
+      "label": "Barnet",
       "confirmed": 4
     },
     {
-      "authority": "Barnsley",
+      "label": "Barnsley",
       "confirmed": 2
     },
     {
-      "authority": "Bath and North East Somerset",
+      "label": "Bath and North East Somerset",
       "confirmed": 0
     },
     {
-      "authority": "Bedford",
+      "label": "Bedford",
       "confirmed": 0
     },
     {
-      "authority": "Bexley",
+      "label": "Bexley",
       "confirmed": 0
     },
     {
-      "authority": "Birmingham",
+      "label": "Birmingham",
       "confirmed": 1
     },
     {
-      "authority": "Blackburn with Darwen",
+      "label": "Blackburn with Darwen",
       "confirmed": 0
     },
     {
-      "authority": "Blackpool",
+      "label": "Blackpool",
       "confirmed": 0
     },
     {
-      "authority": "Bolton",
+      "label": "Bolton",
       "confirmed": 2
     },
     {
-      "authority": "Bournemouth, Christchurch and Poole",
+      "label": "Bournemouth, Christchurch and Poole",
       "confirmed": 2
     },
     {
-      "authority": "Bracknell Forest",
+      "label": "Bracknell Forest",
       "confirmed": 2
     },
     {
-      "authority": "Bradford",
+      "label": "Bradford",
       "confirmed": 1
     },
     {
-      "authority": "Brent",
+      "label": "Brent",
       "confirmed": 3
     },
     {
-      "authority": "Brighton and Hove",
+      "label": "Brighton and Hove",
       "confirmed": 7
     },
     {
-      "authority": "Bristol, City of",
+      "label": "Bristol, City of",
       "confirmed": 2
     },
     {
-      "authority": "Bromley",
+      "label": "Bromley",
       "confirmed": 1
     },
     {
-      "authority": "Buckinghamshire",
+      "label": "Buckinghamshire",
       "confirmed": 1
     },
     {
-      "authority": "Bury",
+      "label": "Bury",
       "confirmed": 3
     },
     {
-      "authority": "Calderdale",
+      "label": "Calderdale",
       "confirmed": 0
     },
     {
-      "authority": "Cambridgeshire",
+      "label": "Cambridgeshire",
       "confirmed": 0
     },
     {
-      "authority": "Camden",
+      "label": "Camden",
       "confirmed": 2
     },
     {
-      "authority": "Central Bedfordshire",
+      "label": "Central Bedfordshire",
       "confirmed": 0
     },
     {
-      "authority": "Cheshire East",
+      "label": "Cheshire East",
       "confirmed": 0
     },
     {
-      "authority": "Cheshire West and Chester",
+      "label": "Cheshire West and Chester",
       "confirmed": 0
     },
     {
-      "authority": "Cornwall",
+      "label": "Cornwall",
       "confirmed": 3
     },
     {
-      "authority": "County Durham",
+      "label": "County Durham",
       "confirmed": 0
     },
     {
-      "authority": "Coventry",
+      "label": "Coventry",
       "confirmed": 3
     },
     {
-      "authority": "Croydon",
+      "label": "Croydon",
       "confirmed": 0
     },
     {
-      "authority": "Cumbria",
+      "label": "Cumbria",
       "confirmed": 5
     },
     {
-      "authority": "Darlington",
+      "label": "Darlington",
       "confirmed": 0
     },
     {
-      "authority": "Derby",
+      "label": "Derby",
       "confirmed": 0
     },
     {
-      "authority": "Derbyshire",
+      "label": "Derbyshire",
       "confirmed": 4
     },
     {
-      "authority": "Devon",
+      "label": "Devon",
       "confirmed": 12
     },
     {
-      "authority": "Doncaster",
+      "label": "Doncaster",
       "confirmed": 0
     },
     {
-      "authority": "Dorset",
+      "label": "Dorset",
       "confirmed": 0
     },
     {
-      "authority": "Dudley",
+      "label": "Dudley",
       "confirmed": 0
     },
     {
-      "authority": "Ealing",
+      "label": "Ealing",
       "confirmed": 5
     },
     {
-      "authority": "East Riding of Yorkshire",
+      "label": "East Riding of Yorkshire",
       "confirmed": 0
     },
     {
-      "authority": "East Sussex",
+      "label": "East Sussex",
       "confirmed": 0
     },
     {
-      "authority": "Enfield",
+      "label": "Enfield",
       "confirmed": 0
     },
     {
-      "authority": "Essex",
+      "label": "Essex",
       "confirmed": 5
     },
     {
-      "authority": "Gateshead",
+      "label": "Gateshead",
       "confirmed": 0
     },
     {
-      "authority": "Gloucestershire",
+      "label": "Gloucestershire",
       "confirmed": 3
     },
     {
-      "authority": "Greenwich",
+      "label": "Greenwich",
       "confirmed": 0
     },
     {
-      "authority": "Hackney",
+      "label": "Hackney",
       "confirmed": 2
     },
     {
-      "authority": "Halton",
+      "label": "Halton",
       "confirmed": 0
     },
     {
-      "authority": "Hammersmith and Fulham",
+      "label": "Hammersmith and Fulham",
       "confirmed": 2
     },
     {
-      "authority": "Hampshire",
+      "label": "Hampshire",
       "confirmed": 8
     },
     {
-      "authority": "Haringey",
+      "label": "Haringey",
       "confirmed": 0
     },
     {
-      "authority": "Harrow",
+      "label": "Harrow",
       "confirmed": 1
     },
     {
-      "authority": "Hartlepool",
+      "label": "Hartlepool",
       "confirmed": 0
     },
     {
-      "authority": "Havering",
+      "label": "Havering",
       "confirmed": 0
     },
     {
-      "authority": "Herefordshire, County of",
+      "label": "Herefordshire, County of",
       "confirmed": 0
     },
     {
-      "authority": "Hertfordshire",
+      "label": "Hertfordshire",
       "confirmed": 13
     },
     {
-      "authority": "Hillingdon",
+      "label": "Hillingdon",
       "confirmed": 1
     },
     {
-      "authority": "Hounslow",
+      "label": "Hounslow",
       "confirmed": 3
     },
     {
-      "authority": "Isle of Wight",
+      "label": "Isle of Wight",
       "confirmed": 1
     },
     {
-      "authority": "Islington",
+      "label": "Islington",
       "confirmed": 0
     },
     {
-      "authority": "Kensington and Chelsea",
+      "label": "Kensington and Chelsea",
       "confirmed": 8
     },
     {
-      "authority": "Kent",
+      "label": "Kent",
       "confirmed": 4
     },
     {
-      "authority": "Kingston upon Hull, City of",
+      "label": "Kingston upon Hull, City of",
       "confirmed": 1
     },
     {
-      "authority": "Kingston upon Thames",
+      "label": "Kingston upon Thames",
       "confirmed": 1
     },
     {
-      "authority": "Kirklees",
+      "label": "Kirklees",
       "confirmed": 0
     },
     {
-      "authority": "Knowsley",
+      "label": "Knowsley",
       "confirmed": 0
     },
     {
-      "authority": "Lambeth",
+      "label": "Lambeth",
       "confirmed": 3
     },
     {
-      "authority": "Lancashire",
+      "label": "Lancashire",
       "confirmed": 4
     },
     {
-      "authority": "Leeds",
+      "label": "Leeds",
       "confirmed": 3
     },
     {
-      "authority": "Leicester",
+      "label": "Leicester",
       "confirmed": 0
     },
     {
-      "authority": "Leicestershire",
+      "label": "Leicestershire",
       "confirmed": 1
     },
     {
-      "authority": "Lewisham",
+      "label": "Lewisham",
       "confirmed": 3
     },
     {
-      "authority": "Lincolnshire",
+      "label": "Lincolnshire",
       "confirmed": 1
     },
     {
-      "authority": "Liverpool",
+      "label": "Liverpool",
       "confirmed": 4
     },
     {
-      "authority": "Luton",
+      "label": "Luton",
       "confirmed": 2
     },
     {
-      "authority": "Manchester",
+      "label": "Manchester",
       "confirmed": 5
     },
     {
-      "authority": "Medway",
+      "label": "Medway",
       "confirmed": 2
     },
     {
-      "authority": "Merton",
+      "label": "Merton",
       "confirmed": 1
     },
     {
-      "authority": "Middlesbrough",
+      "label": "Middlesbrough",
       "confirmed": 0
     },
     {
-      "authority": "Milton Keynes",
+      "label": "Milton Keynes",
       "confirmed": 1
     },
     {
-      "authority": "Newcastle upon Tyne",
+      "label": "Newcastle upon Tyne",
       "confirmed": 3
     },
     {
-      "authority": "Newham",
+      "label": "Newham",
       "confirmed": 0
     },
     {
-      "authority": "Norfolk",
+      "label": "Norfolk",
       "confirmed": 0
     },
     {
-      "authority": "North East Lincolnshire",
+      "label": "North East Lincolnshire",
       "confirmed": 0
     },
     {
-      "authority": "North Lincolnshire",
+      "label": "North Lincolnshire",
       "confirmed": 0
     },
     {
-      "authority": "North Somerset",
+      "label": "North Somerset",
       "confirmed": 0
     },
     {
-      "authority": "North Tyneside",
+      "label": "North Tyneside",
       "confirmed": 1
     },
     {
-      "authority": "North Yorkshire",
+      "label": "North Yorkshire",
       "confirmed": 0
     },
     {
-      "authority": "Northamptonshire",
+      "label": "Northamptonshire",
       "confirmed": 4
     },
     {
-      "authority": "Northumberland",
+      "label": "Northumberland",
       "confirmed": 0
     },
     {
-      "authority": "Nottingham",
+      "label": "Nottingham",
       "confirmed": 2
     },
     {
-      "authority": "Nottinghamshire",
+      "label": "Nottinghamshire",
       "confirmed": 3
     },
     {
-      "authority": "Oldham",
+      "label": "Oldham",
       "confirmed": 2
     },
     {
-      "authority": "Oxfordshire",
+      "label": "Oxfordshire",
       "confirmed": 5
     },
     {
-      "authority": "Peterborough",
+      "label": "Peterborough",
       "confirmed": 1
     },
     {
-      "authority": "Plymouth",
+      "label": "Plymouth",
       "confirmed": 0
     },
     {
-      "authority": "Portsmouth",
+      "label": "Portsmouth",
       "confirmed": 0
     },
     {
-      "authority": "Reading",
+      "label": "Reading",
       "confirmed": 0
     },
     {
-      "authority": "Redbridge",
+      "label": "Redbridge",
       "confirmed": 1
     },
     {
-      "authority": "Redcar and Cleveland",
+      "label": "Redcar and Cleveland",
       "confirmed": 0
     },
     {
-      "authority": "Richmond upon Thames",
+      "label": "Richmond upon Thames",
       "confirmed": 0
     },
     {
-      "authority": "Rochdale",
+      "label": "Rochdale",
       "confirmed": 0
     },
     {
-      "authority": "Rotherham",
+      "label": "Rotherham",
       "confirmed": 0
     },
     {
-      "authority": "Rutland",
+      "label": "Rutland",
       "confirmed": 0
     },
     {
-      "authority": "Salford",
+      "label": "Salford",
       "confirmed": 0
     },
     {
-      "authority": "Sandwell",
+      "label": "Sandwell",
       "confirmed": 0
     },
     {
-      "authority": "Sefton",
+      "label": "Sefton",
       "confirmed": 0
     },
     {
-      "authority": "Sheffield",
+      "label": "Sheffield",
       "confirmed": 0
     },
     {
-      "authority": "Shropshire",
+      "label": "Shropshire",
       "confirmed": 0
     },
     {
-      "authority": "Slough",
+      "label": "Slough",
       "confirmed": 0
     },
     {
-      "authority": "Solihull",
+      "label": "Solihull",
       "confirmed": 0
     },
     {
-      "authority": "Somerset",
+      "label": "Somerset",
       "confirmed": 2
     },
     {
-      "authority": "South Gloucestershire",
+      "label": "South Gloucestershire",
       "confirmed": 0
     },
     {
-      "authority": "South Tyneside",
+      "label": "South Tyneside",
       "confirmed": 0
     },
     {
-      "authority": "Southampton",
+      "label": "Southampton",
       "confirmed": 0
     },
     {
-      "authority": "Southend-on-Sea",
+      "label": "Southend-on-Sea",
       "confirmed": 1
     },
     {
-      "authority": "Southwark",
+      "label": "Southwark",
       "confirmed": 3
     },
     {
-      "authority": "St. Helens",
+      "label": "St. Helens",
       "confirmed": 0
     },
     {
-      "authority": "Staffordshire",
+      "label": "Staffordshire",
       "confirmed": 4
     },
     {
-      "authority": "Stockport",
+      "label": "Stockport",
       "confirmed": 0
     },
     {
-      "authority": "Stockton-on-Tees",
+      "label": "Stockton-on-Tees",
       "confirmed": 0
     },
     {
-      "authority": "Stoke-on-Trent",
+      "label": "Stoke-on-Trent",
       "confirmed": 0
     },
     {
-      "authority": "Suffolk",
+      "label": "Suffolk",
       "confirmed": 0
     },
     {
-      "authority": "Sunderland",
+      "label": "Sunderland",
       "confirmed": 0
     },
     {
-      "authority": "Surrey",
+      "label": "Surrey",
       "confirmed": 5
     },
     {
-      "authority": "Sutton",
+      "label": "Sutton",
       "confirmed": 0
     },
     {
-      "authority": "Swindon",
+      "label": "Swindon",
       "confirmed": 2
     },
     {
-      "authority": "Tameside",
+      "label": "Tameside",
       "confirmed": 1
     },
     {
-      "authority": "Telford and Wrekin",
+      "label": "Telford and Wrekin",
       "confirmed": 0
     },
     {
-      "authority": "Thurrock",
+      "label": "Thurrock",
       "confirmed": 0
     },
     {
-      "authority": "Torbay",
+      "label": "Torbay",
       "confirmed": 6
     },
     {
-      "authority": "Tower Hamlets",
+      "label": "Tower Hamlets",
       "confirmed": 1
     },
     {
-      "authority": "Trafford",
+      "label": "Trafford",
       "confirmed": 4
     },
     {
-      "authority": "Wakefield",
+      "label": "Wakefield",
       "confirmed": 0
     },
     {
-      "authority": "Walsall",
+      "label": "Walsall",
       "confirmed": 0
     },
     {
-      "authority": "Waltham Forest",
+      "label": "Waltham Forest",
       "confirmed": 0
     },
     {
-      "authority": "Wandsworth",
+      "label": "Wandsworth",
       "confirmed": 3
     },
     {
-      "authority": "Warrington",
+      "label": "Warrington",
       "confirmed": 0
     },
     {
-      "authority": "Warwickshire",
+      "label": "Warwickshire",
       "confirmed": 3
     },
     {
-      "authority": "West Berkshire",
+      "label": "West Berkshire",
       "confirmed": 0
     },
     {
-      "authority": "West Sussex",
+      "label": "West Sussex",
       "confirmed": 3
     },
     {
-      "authority": "Westminster",
+      "label": "Westminster",
       "confirmed": 3
     },
     {
-      "authority": "Wigan",
+      "label": "Wigan",
       "confirmed": 3
     },
     {
-      "authority": "Wiltshire",
+      "label": "Wiltshire",
       "confirmed": 3
     },
     {
-      "authority": "Windsor and Maidenhead",
+      "label": "Windsor and Maidenhead",
       "confirmed": 0
     },
     {
-      "authority": "Wirral",
+      "label": "Wirral",
       "confirmed": 1
     },
     {
-      "authority": "Wokingham",
+      "label": "Wokingham",
       "confirmed": 3
     },
     {
-      "authority": "Wolverhampton",
+      "label": "Wolverhampton",
       "confirmed": 0
     },
     {
-      "authority": "Worcestershire",
+      "label": "Worcestershire",
       "confirmed": 0
     },
     {
-      "authority": "York",
+      "label": "York",
       "confirmed": 3
     },
     {
-      "authority": "Awaiting confirmation",
+      "label": "Awaiting clarification",
       "confirmed": 20
     }
   ]

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react';
 import Head from 'next/head';
-import { jsx, ThemeProvider } from 'theme-ui';
+import { jsx, ThemeProvider, Flex } from 'theme-ui';
 import theme from '../../theme';
 
 const Shell: React.FC = ({
@@ -15,13 +15,16 @@ const Shell: React.FC = ({
         rel="stylesheet"
       />
     </Head>
-    <div
+    <Flex
       sx={{
         p: 10,
+        flexDirection: ['column', 'row'],
+        height: ['auto', '100vh'],
+        justifyContent: 'space-between',
       }}
     >
       {children}
-    </div>
+    </Flex>
   </ThemeProvider>
 );
 

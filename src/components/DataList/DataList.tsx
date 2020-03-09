@@ -16,7 +16,7 @@ const DataList: React.SFC<DataListProps> = ({
 }) => {
   const { theme: { colors } } = useThemeUI();
   const dataListRef = React.useRef(null);
-  const [activeFilter, setActiveFilter] = React.useState('key');
+  const [activeFilter, setActiveFilter] = React.useState('value');
   const newFilter = activeFilter === 'key' ? 'value' : 'key';
   const ordered = orderBy(data, activeFilter, activeFilter === 'key' ? 'asc' : 'desc');
 
@@ -30,8 +30,8 @@ const DataList: React.SFC<DataListProps> = ({
       title={title}
       action={<Button onClick={(): void => setActiveFilter(newFilter)}>{newFilter}</Button>}
     >
-      {ordered.map(({ key, value }) => {
-        const isWarning = value > 3;
+      {data.length ? ordered.map(({ key, value }) => {
+        const isWarning = value > 30;
         return (
           <ListItem
             key={key}
@@ -54,7 +54,9 @@ const DataList: React.SFC<DataListProps> = ({
             </Text>
           </ListItem>
         );
-      })}
+      }) : (
+        <Text variant="upper" sx={{ p: 3, pt: 0, textAlign: 'center' }}>Data not yet ready</Text>
+      )}
     </Card>
   );
 };

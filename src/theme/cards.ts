@@ -6,5 +6,6 @@ export default {
     position: 'relative',
     m: 10,
     border: 0,
+    bg: 'backgroundMuted',
   },
 };
