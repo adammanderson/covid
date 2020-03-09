@@ -6,4 +6,5 @@ export * from './Corners';
 export * from './Totaler';
 export * from './Header';
 export * from './Bar';
+export * from './Notice';
 export { default as Icons } from './Icons';

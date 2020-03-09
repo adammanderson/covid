@@ -11,7 +11,7 @@ export default {
     color: 'muted',
   },
   small: {
-    color: 'muted',
+    color: 'accent',
     fontSize: 0,
   },
   inlineBold: {
