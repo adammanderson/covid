@@ -5,10 +5,7 @@ import {
   LineChart,
   Line,
   XAxis,
-  YAxis,
   Tooltip,
-  CartesianGrid,
-  Brush,
   Legend,
   ResponsiveContainer,
 } from 'recharts';
@@ -39,10 +36,10 @@ const Bar: React.SFC<BarProps> = ({
         <LineChart
           data={data}
           margin={{
-            top: 30,
+            top: 10,
             right: 40,
             left: 40,
-            bottom: 20,
+            bottom: 10,
           }}
         >
           <XAxis

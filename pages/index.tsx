@@ -82,7 +82,7 @@ const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) =>
           <Bar
             title="Cases by region"
             data={allRegionsByDate}
-            height={295}
+            height="100%"
             legend={false}
           />
         </Flex>
