@@ -54,7 +54,7 @@ const Mapper: React.FC<MapperProps> = ({
           color: '#000',
           opacity: 1,
           weight: 1,
-          fillColor: `rgba(255, 0, 0, ${confirmedPerc }`,
+          fillColor: `rgba(255, 0, 0, ${confirmedPerc}`,
           fillOpacity: 0.8,
         };
       },
@@ -66,6 +66,13 @@ const Mapper: React.FC<MapperProps> = ({
     }).addTo(map);
 
     geojson.addData(engJson);
+
+    map.on('popupopen', (e) => {
+      (window as any).gtag('event', 'click', {
+        event_category: 'mapper',
+        event_label: e.target._popup._source.feature.properties.NUTS112NM,
+      });
+    });
   }, []);
 
   return (
