@@ -8,4 +8,5 @@ export * from './Header';
 export * from './Bar';
 export * from './Notice';
 export * from './Mapper';
+export * from './Fetcher';
 export { default as Icons } from './Icons';

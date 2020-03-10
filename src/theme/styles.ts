@@ -8,5 +8,12 @@ export default {
     webkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
   },
+  a: {
+    color: 'text',
+    textDecoration: 'none',
+    ':hover': {
+      textDecoration: 'underline',
+    },
+  },
   ...scrollbar,
 };

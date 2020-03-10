@@ -9,6 +9,10 @@ const Notice: React.FC = ({
     sx={{
       position: 'relative' as 'relative',
       flex: 1,
+      display: 'flex',
+      flexFlow: 'row nowrap',
+      justifyContent: 'space-between',
+      alignItems: 'center',
       py: 2,
       m: 2,
       mb: 0,

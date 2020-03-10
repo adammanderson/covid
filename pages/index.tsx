@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { NextPage } from 'next';
 import { format } from 'date-fns';
-import { Flex, Text } from 'theme-ui';
+import { Flex, Link, Text } from 'theme-ui';
+import { motion } from 'framer-motion';
+import { Wifi } from 'react-feather';
 import sumBy from 'lodash/sumBy';
 import {
   Shell,
@@ -11,6 +13,7 @@ import {
   Bar,
   Notice,
   Mapper,
+  Fetcher,
 } from '../src/components';
 import {
   fetchData,
@@ -26,6 +29,7 @@ interface DataAttributes {
 }
 
 const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
+  const [loading, setLoading] = React.useState(false);
   const [data, setData] = React.useState(serverData);
   const {
     created,
@@ -41,12 +45,17 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const regionDataByDateName = groupRegionByDateName(data);
   const allRegionsByDate = groupAllRegionsByDate(data);
 
+  const handleFetchData = async () => {
+    setLoading(true);
+    const newData: any[] = await fetchData();
+    setData(newData);
+    setLoading(false);
+  };
+
   React.useEffect(() => {
     const fetchTimer = setInterval(async () => {
-      const newData: any[] = await fetchData();
-      console.log(newData);
-      setData(newData);
-    }, 5000);
+      handleFetchData();
+    }, 600000);
     return () => clearInterval(fetchTimer);
   }, []);
 
@@ -125,10 +134,21 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
         <Notice>
           <Text variant="small">
             This app sources data from
-            Public Health England (PHE), UK Government.
-            Do not rely on this data for medical guidance.
-            Always raise health concerns with your qualified GP.
+            {' '}
+            <Link
+              href="https://www.gov.uk/government/organisations/public-health-england"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Public Health England (PHE), UK Government
+            </Link>
+            . Do not rely on this data for medical guidance.
+            Always raise health concerns with your GP.
           </Text>
+          <Fetcher
+            loading={loading}
+            onClick={() => handleFetchData()}
+          />
         </Notice>
       </Flex>
     </Shell>
