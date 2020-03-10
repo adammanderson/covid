@@ -2,8 +2,9 @@
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx, Flex } from 'theme-ui';
+import { useBreakpointIndex } from '@theme-ui/match-media';
 import Head from 'next/head';
-import L from 'leaflet';
+import L, { LatLngTuple} from 'leaflet';
 import * as topojson from 'topojson';
 import engJson from '../../../map/topo_nuts1.json';
 import { Corners } from '..';
@@ -12,14 +13,18 @@ import { MapperProps } from '.';
 const Mapper: React.FC<MapperProps> = ({
   regionData,
 }) => {
+  const breakpoint = useBreakpointIndex();
+  const isMobile = breakpoint === 0;
+
   React.useEffect(() => {
+    const position: LatLngTuple = [(isMobile ? 53 : 54.5), -2];
     const map = L.map('map-container', { dragging: !L.Browser.mobile });
     const bgLayer = L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png', {
       attribution: '',
       maxZoom: 19,
     });
 
-    map.setView([54.505, -2.09], 6);
+    map.setView(position, 6);
     bgLayer.addTo(map);
 
     // extend Leaflet to create a GeoJSON layer from a TopoJSON file
@@ -73,16 +78,22 @@ const Mapper: React.FC<MapperProps> = ({
         event_label: e.target._popup._source.feature.properties.NUTS112NM,
       });
     });
-  }, []);
+
+    return () => {
+      if (map && map.remove) {
+        map.off();
+        map.remove();
+      }
+    };
+  }, [isMobile]);
 
   return (
     <Flex
       sx={{
         flex: 1,
-        order: [1, 2],
         display: 'flex',
         flexDirection: 'column',
-        flexBasis: ['580px', 'auto'],
+        flexBasis: ['480px', 'auto'],
         position: 'relative',
         m: 10,
       }}

@@ -49,7 +49,6 @@ const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) =>
       >
         <Flex
           sx={{
-            order: [2, 1],
             flexDirection: 'column',
             flexBasis: '350px',
           }}
@@ -91,7 +90,6 @@ const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) =>
         />
         <Flex
           sx={{
-            order: [3, 3],
             flexDirection: 'column',
             flexBasis: '350px',
           }}
