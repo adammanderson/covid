@@ -15,16 +15,28 @@ import {
 import dataImport from '../data';
 import { groupRegionByDateName, groupAllRegionsByDate } from '../src/helpers';
 
-const Home: NextPage = () => {
-  const dataArray = Object.values(dataImport);
-  const { created, mortalityRate, authorities, regions } = dataArray[dataArray.length - 1];
+interface DataAttributes {
+  created: string;
+  mortalityRate: number;
+  authorities: any[];
+  regions: any[];
+}
+
+const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) => {
+  const dataArray = Object.values(data);
+  const {
+    created,
+    mortalityRate,
+    authorities,
+    regions,
+  } = dataArray[dataArray.length - 1];
   const activeDate = new Date(created);
   const confirmedByAuthority = authorities.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
   const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
   const totalActiveByRegion = { label: 'active cases', value: sumBy(regions, 'confirmed') };
   const totalDead = { label: 'dead', value: mortalityRate };
-  const regionDataByDateName = groupRegionByDateName(dataImport);
-  const allRegionsByDate = groupAllRegionsByDate(dataImport);
+  const regionDataByDateName = groupRegionByDateName(data);
+  const allRegionsByDate = groupAllRegionsByDate(data);
 
   return (
     <Shell>
@@ -112,5 +124,15 @@ const Home: NextPage = () => {
     </Shell>
   );
 };
+
+export async function getStaticProps() {
+  const data = await dataImport();
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
 
 export default Home;

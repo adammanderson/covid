@@ -1,13 +1,7 @@
-import _20200305 from './20200305.json';
-import _20200306 from './20200306.json';
-import _20200307 from './20200307.json';
-import _20200308 from './20200308.json';
-import _20200309 from './20200309.json';
-
-export default {
-  _20200305,
-  _20200306,
-  _20200307,
-  _20200308,
-  _20200309,
-};
+export default async () => ({
+  _20200305: await import('./20200305.json').then((d) => JSON.parse(JSON.stringify(d))),
+  _20200306: await import('./20200306.json').then((d) => JSON.parse(JSON.stringify(d))),
+  _20200307: await import('./20200307.json').then((d) => JSON.parse(JSON.stringify(d))),
+  _20200308: await import('./20200308.json').then((d) => JSON.parse(JSON.stringify(d))),
+  _20200309: await import('./20200309.json').then((d) => JSON.parse(JSON.stringify(d))),
+});
