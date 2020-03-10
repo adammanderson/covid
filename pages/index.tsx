@@ -12,8 +12,11 @@ import {
   Notice,
   Mapper,
 } from '../src/components';
-import dataImport from '../data';
-import { groupRegionByDateName, groupAllRegionsByDate } from '../src/helpers';
+import {
+  fetchData,
+  groupRegionByDateName,
+  groupAllRegionsByDate,
+} from '../src/helpers';
 
 interface DataAttributes {
   created: string;
@@ -22,14 +25,14 @@ interface DataAttributes {
   regions: any[];
 }
 
-const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) => {
-  const dataArray = Object.values(data);
+const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
+  const [data, setData] = React.useState(serverData);
   const {
     created,
     mortalityRate,
     authorities,
     regions,
-  } = dataArray[dataArray.length - 1];
+  } = data[data.length - 1];
   const activeDate = new Date(created);
   const confirmedByAuthority = authorities.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
   const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
@@ -37,6 +40,15 @@ const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) =>
   const totalDead = { label: 'dead', value: mortalityRate };
   const regionDataByDateName = groupRegionByDateName(data);
   const allRegionsByDate = groupAllRegionsByDate(data);
+
+  React.useEffect(() => {
+    const fetchTimer = setInterval(async () => {
+      const newData: any[] = await fetchData();
+      console.log(newData);
+      setData(newData);
+    }, 5000);
+    return () => clearInterval(fetchTimer);
+  }, []);
 
   return (
     <Shell>
@@ -123,12 +135,12 @@ const Home: NextPage<{ data: { [key: string]: DataAttributes} }> = ({ data }) =>
   );
 };
 
-export async function getStaticProps() {
-  const data = await dataImport();
+export async function getServerSideProps({ req }) {
+  const serverData = await fetchData(req);
 
   return {
     props: {
-      data,
+      serverData,
     },
   };
 }
