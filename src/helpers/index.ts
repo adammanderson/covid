@@ -4,3 +4,4 @@ export * from './groupRegionByDateName';
 export * from './groupAllRegionsByDate';
 export * from './fetchData';
 export * from './buildRequestUrl';
+export * from './getCountryTotals';

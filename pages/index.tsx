@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import { format } from 'date-fns';
 import { Flex, Link, Text } from 'theme-ui';
 import sumBy from 'lodash/sumBy';
+import { DataAttributes } from '../src/types';
 import {
   Shell,
   DataList,
@@ -15,36 +16,23 @@ import {
 } from '../src/components';
 import {
   fetchData,
-  groupRegionByDateName,
   groupAllRegionsByDate,
+  getCountryTotals,
 } from '../src/helpers';
 
-interface DataAttributes {
-  created: string;
-  mortalityRate: number;
-  authorities: any[];
-  regions: any[];
-}
 
 const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const [loading, setLoading] = React.useState(false);
   const [data, setData] = React.useState(serverData);
   const {
     created,
-    mortalityRate,
-    authorities,
-    regions,
+    countries,
   } = data[data.length - 1];
   const activeDate = new Date(created);
-  const confirmedByAuthority = authorities.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
-  const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
-  const totalActiveByRegion = { label: 'active', value: sumBy(regions, 'confirmed') };
-  const totalDeaths = { label: 'deaths', value: mortalityRate };
-  const totalCasesEngland = { label: 'England', value: sumBy(regions.filter((r) => !['Wales', 'Scotland', 'Northern Ireland'].includes(r.label)), 'confirmed') };
-  const totalCasesWales = { label: 'Wales', value: regions.find((r) => r.label === 'Wales')?.confirmed };
-  const totalCasesScotland = { label: 'Scotland', value: regions.find((r) => r.label === 'Scotland')?.confirmed };
-  const regionDataByDateName = groupRegionByDateName(data);
-  const allRegionsByDate = groupAllRegionsByDate(data);
+  const confirmedByAuthority = countries.map((a) => a.authorities.data).flat().map(({ label, confirmed }) => ({ key: label, value: confirmed }));
+  const confirmedByRegion = countries.map((a) => a.regions.data).flat().map(({ label, confirmed }) => ({ key: label, value: confirmed }));
+  const totalActiveByRegion = { label: 'active', value: sumBy(confirmedByRegion, 'value') };
+  const totalDeaths = { label: 'deaths', value: sumBy(countries.map((a) => a.mortalityRate)) };
 
   const handleFetchData = async () => {
     setLoading(true);
@@ -87,31 +75,27 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
             ]}
           />
           <Totaler
-            data={[
-              totalCasesEngland,
-              totalCasesScotland,
-              totalCasesWales,
-            ]}
+            data={getCountryTotals(countries)}
           />
-          <Bar
-            data={allRegionsByDate}
+          {/* <Bar
+            data={getRegionsByDate}
             height="100%"
             legend={false}
-          />
+          /> */}
         </Flex>
-        <Mapper
+        {/* <Mapper
           data={[
             ...regions,
             ...authorities,
           ]}
-        />
+        /> */}
         <Flex
           sx={{
             flexDirection: 'column',
             flexBasis: '350px',
           }}
         >
-          <Bar
+          {/* <Bar
             data={regionDataByDateName}
             fixed
             height={150}
@@ -125,7 +109,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
                 color: 'red',
               },
             ]}
-          />
+          /> */}
           <DataList
             title="by region"
             data={confirmedByRegion}

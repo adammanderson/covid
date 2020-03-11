@@ -1,44 +1,93 @@
 {
-  "source": "Public Health England (PHE)",
   "created": "2020-03-05T14:00:00.511Z",
-  "mortalityRate": 1,
-  "regions": [
+  "countries": [
     {
-      "label": "East of England",
-      "confirmed": 8
+      "name": "England",
+      "source": "Public Health England (PHE)",
+      "mortalityRate": null,
+      "regions": {
+        "updatedAt": "2020-03-05T14:00:00.511Z",
+        "data": [
+          {
+            "label": "East of England",
+            "confirmed": 8
+          },
+          {
+            "label": "London",
+            "confirmed": 25
+          },
+          {
+            "label": "Midlands",
+            "confirmed": 9
+          },
+          {
+            "label": "North East and Yorkshire",
+            "confirmed": 10
+          },
+          {
+            "label": "North West",
+            "confirmed": 17
+          },
+          {
+            "label": "South East",
+            "confirmed": 17
+          },
+          {
+            "label": "South West",
+            "confirmed": 15
+          },
+          {
+            "label": "To be determined",
+            "confirmed": 4
+          }
+        ]
+      },
+      "authorities": {
+        "updatedAt": "2020-03-05T14:00:00.511Z",
+        "data": []
+      }
     },
     {
-      "label": "London",
-      "confirmed": 25
+      "name": "Scotland",
+      "source": "Scottish Government (Riaghaltas na h-Alba)",
+      "mortalityRate": null,
+      "totalCases": 6,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": "2020-03-05T14:00:00.511Z",
+        "data": []
+      }
     },
     {
-      "label": "Midlands",
-      "confirmed": 9
+      "name": "Wales",
+      "source": "Public Health Wales (lechyd Cyhoeddus Cymru)",
+      "mortalityRate": null,
+      "totalCases": 0,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
     },
     {
-      "label": "North East and Yorkshire",
-      "confirmed": 10
-    },
-    {
-      "label": "North West",
-      "confirmed": 17
-    },
-    {
-      "label": "South East",
-      "confirmed": 17
-    },
-    {
-      "label": "South West",
-      "confirmed": 15
-    },
-    {
-      "label": "To be determined",
-      "confirmed": 4
-    },
-    {
-      "label": "Scotland",
-      "confirmed": 6
+      "name": "Northern Ireland",
+      "source": "HSC Public Health Agency",
+      "mortalityRate": null,
+      "totalCases": 3,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
     }
-  ],
-  "authorities": []
+  ]
 }
