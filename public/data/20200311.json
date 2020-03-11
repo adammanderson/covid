@@ -1,0 +1,93 @@
+{
+  "source": "Public Health England (PHE)",
+  "created": "2020-03-11T14:30:00.000+00:00",
+  "mortalityRate": 6,
+  "regions": [
+    {
+      "label": "East of England",
+      "confirmed": 32
+    },
+    {
+      "label": "London",
+      "confirmed": 104
+    },
+    {
+      "label": "Midlands",
+      "confirmed": 42
+    },
+    {
+      "label": "North East and Yorkshire",
+      "confirmed": 32
+    },
+    {
+      "label": "North West",
+      "confirmed": 43
+    },
+    {
+      "label": "South East",
+      "confirmed": 60
+    },
+    {
+      "label": "South West",
+      "confirmed": 44
+    },
+    {
+      "label": "To be determined",
+      "confirmed": 30
+    },
+    {
+      "label": "Scotland",
+      "confirmed": 36
+    },
+    {
+      "label": "Wales",
+      "confirmed": 15
+    },
+    {
+      "label": "Northern Ireland",
+      "confirmed": 18
+    }
+  ],
+  "authorities": [
+    {
+      "label": "Ayrshire and Arran",
+      "confirmed": 3
+    },
+    {
+      "label": "Borders",
+      "confirmed": 2
+    },
+    {
+      "label": "Fife",
+      "confirmed": 2
+    },
+    {
+      "label": "Forth Valley",
+      "confirmed": 2
+    },
+    {
+      "label": "Grampian",
+      "confirmed": 6
+    },
+    {
+      "label": "Greater Glasgow and Clyde",
+      "confirmed": 5
+    },
+    {
+      "label": "Lanarkshire",
+      "confirmed": 4
+    },
+    {
+      "label": "Lothian",
+      "confirmed": 8
+    },
+    {
+      "label": "Shetland",
+      "confirmed": 2
+    },
+    {
+      "label": "Tayside",
+      "confirmed": 2
+    }
+  ]
+}

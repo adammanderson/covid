@@ -40,7 +40,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
   const totalActiveByRegion = { label: 'active', value: sumBy(regions, 'confirmed') };
   const totalDeaths = { label: 'deaths', value: mortalityRate };
-  const totalCasesEngland = { label: 'England', value: sumBy(regions.filter((r) => !['Wales', 'Scotland'].includes(r.label)), 'confirmed') };
+  const totalCasesEngland = { label: 'England', value: sumBy(regions.filter((r) => !['Wales', 'Scotland', 'Northern Ireland'].includes(r.label)), 'confirmed') };
   const totalCasesWales = { label: 'Wales', value: regions.find((r) => r.label === 'Wales')?.confirmed };
   const totalCasesScotland = { label: 'Scotland', value: regions.find((r) => r.label === 'Scotland')?.confirmed };
   const regionDataByDateName = groupRegionByDateName(data);
