@@ -6,12 +6,13 @@ import { useBreakpointIndex } from '@theme-ui/match-media';
 import Head from 'next/head';
 import L, { LatLngTuple} from 'leaflet';
 import * as topojson from 'topojson';
-import engJson from '../../../map/topo_nuts1.json';
+import engJson from '../../../map/topo11.json';
 import { Corners } from '..';
 import { MapperProps } from '.';
 
 const Mapper: React.FC<MapperProps> = ({
-  regionData,
+  regions,
+  authorities,
 }) => {
   const breakpoint = useBreakpointIndex();
   const isMobile = breakpoint === 0;
@@ -52,21 +53,21 @@ const Mapper: React.FC<MapperProps> = ({
 
     const geojson = (L as any).topoJson(null, {
       style: (feature) => {
-        const featureLabel = feature.properties.NUTS112NM;
-        const featureData = regionData.find((region) => featureLabel.includes(region.label));
-        const confirmedPerc = featureData?.confirmed / 100;
+        const featureLabel = feature.properties.AUTH;
+        const featureData = authorities.find((auth) => featureLabel.includes(auth.label));
+        const confirmedPerc = featureData && (featureData.confirmed / 15);
         return {
-          color: '#000',
+          color: '#011017',
           opacity: 1,
           weight: 1,
-          fillColor: `rgba(255, 0, 0, ${confirmedPerc}`,
+          fillColor: confirmedPerc ? `rgba(255, 0, 0, ${confirmedPerc})` : 'transparent',
           fillOpacity: 0.8,
         };
       },
       onEachFeature: (feature, layer) => {
-        const featureLabel = feature.properties.NUTS112NM;
-        const featureData = regionData.find((region) => featureLabel.includes(region.label));
-        layer.bindPopup(`<p>${feature.properties.NUTS112NM}</p><span>${featureData?.confirmed}</span>`);
+        const featureLabel = feature.properties.AUTH;
+        const featureData = authorities.find((auth) => featureLabel.includes(auth.label));
+        layer.bindPopup(`<p>${feature.properties.AUTH}</p><span>${featureData ? featureData.confirmed : 'No data'}</span>`);
       },
     }).addTo(map);
 

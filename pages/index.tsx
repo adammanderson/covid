@@ -107,7 +107,8 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
           />
         </Flex>
         <Mapper
-          regionData={regions}
+          regions={regions}
+          authorities={authorities}
         />
         <Flex
           sx={{

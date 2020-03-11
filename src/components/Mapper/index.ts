@@ -6,5 +6,6 @@ export const Mapper = dynamic(
 );
 
 export interface MapperProps {
-  regionData: any;
+  regions: any;
+  authorities: any;
 }
