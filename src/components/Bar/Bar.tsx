@@ -22,12 +22,16 @@ const Bar: React.SFC<BarProps> = ({
   legend = true,
 }) => {
   const breakpoint = useBreakpointIndex();
-  const isMobile = breakpoint === 0;
+  const [isMobile, setIsMobile] = React.useState(false);
   const { theme: { colors } } = useThemeUI();
   const autoLines = Object.keys(data[0])
     .filter((key) => !['name', 'To be determined'].includes(key))
     .map((key) => ({ dataKey: key, color: 'white' }));
   const visibleLines = lines || autoLines;
+
+  React.useEffect(() => {
+    setIsMobile(breakpoint === 0);
+  }, [breakpoint]);
 
   return (
     <Card
@@ -85,4 +89,4 @@ const Bar: React.SFC<BarProps> = ({
   );
 };
 
-export default Bar;
+export default React.memo(Bar);

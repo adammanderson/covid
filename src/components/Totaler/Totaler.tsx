@@ -79,4 +79,4 @@ const Totaler: React.SFC<TotalerProps> = ({
   );
 };
 
-export default Totaler;
+export default React.memo(Totaler);

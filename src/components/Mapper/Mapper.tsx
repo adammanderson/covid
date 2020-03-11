@@ -140,4 +140,4 @@ const Mapper: React.FC<MapperProps> = ({
   );
 };
 
-export default Mapper;
+export default React.memo(Mapper);
