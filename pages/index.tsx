@@ -2,8 +2,6 @@ import * as React from 'react';
 import { NextPage } from 'next';
 import { format } from 'date-fns';
 import { Flex, Link, Text } from 'theme-ui';
-import { motion } from 'framer-motion';
-import { Wifi } from 'react-feather';
 import sumBy from 'lodash/sumBy';
 import {
   Shell,
@@ -91,8 +89,8 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
           <Totaler
             data={[
               totalCasesEngland,
-              totalCasesWales,
               totalCasesScotland,
+              totalCasesWales,
             ]}
           />
           <Bar

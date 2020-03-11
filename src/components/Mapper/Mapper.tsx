@@ -56,7 +56,7 @@ const Mapper: React.FC<MapperProps> = ({
         const featureData = data.find((auth) => featureLabel.includes(auth.label));
         const confirmedPerc = featureData && (featureData.confirmed / 15);
         return {
-          color: '#011017',
+          color: 'rgba(0, 0, 0, 0.4)',
           opacity: 1,
           weight: 1,
           fillColor: confirmedPerc ? `rgba(255, 0, 0, ${confirmedPerc})` : 'transparent',

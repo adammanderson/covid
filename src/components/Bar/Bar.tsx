@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx, Text, useThemeUI } from 'theme-ui';
+import { useBreakpointIndex } from '@theme-ui/match-media';
 import {
   LineChart,
   Line,
@@ -20,6 +21,8 @@ const Bar: React.SFC<BarProps> = ({
   height = 220,
   legend = true,
 }) => {
+  const breakpoint = useBreakpointIndex();
+  const isMobile = breakpoint === 0;
   const { theme: { colors } } = useThemeUI();
   const autoLines = Object.keys(data[0])
     .filter((key) => !['name', 'To be determined'].includes(key))
@@ -32,7 +35,7 @@ const Bar: React.SFC<BarProps> = ({
       fixed={fixed}
       centered
     >
-      <ResponsiveContainer width="100%" height={height}>
+      <ResponsiveContainer width="100%" height={isMobile ? 220 : height}>
         <LineChart
           data={data}
           margin={{

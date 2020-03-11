@@ -1,0 +1,11 @@
+{
+  "source": "Public Health England (PHE)",
+  "created": "2020-03-10T14:19:25.000+00:00",
+  "mortalityRate": 6,
+  "regions": [
+    {
+      "region": "London",
+      "authorities": []
+    }
+  ]
+}
