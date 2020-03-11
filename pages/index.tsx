@@ -144,7 +144,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
       >
         <Notice>
           <Text variant="small">
-            This app sources data from
+            Data sourced from
             {' '}
             <Link
               href="https://www.gov.uk/government/organisations/public-health-england"
@@ -154,7 +154,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
               Public Health England (PHE), UK Government
             </Link>
             . Do not rely on this data for medical guidance.
-            Always raise health concerns with your GP.
+            Data is subject to changes/corrections.
           </Text>
           <Fetcher
             loading={loading}
