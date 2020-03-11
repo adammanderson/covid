@@ -34,6 +34,10 @@
     {
       "label": "To be determined",
       "confirmed": 22
+    },
+    {
+      "label": "Scotland",
+      "confirmed": 16
     }
   ],
   "authorities": [
@@ -636,6 +640,38 @@
     {
       "label": "Awaiting confirmation",
       "confirmed": 20
+    },
+    {
+      "label": "Tayside",
+      "confirmed": 1
+    },
+    {
+      "label": "Ayrshire and Arran",
+      "confirmed": 1
+    },
+    {
+      "label": "Forth Valley",
+      "confirmed": 2
+    },
+    {
+      "label": "Greater Glasgow and Clyde",
+      "confirmed": 2
+    },
+    {
+      "label": "Grampian",
+      "confirmed": 4
+    },
+    {
+      "label": "Fife",
+      "confirmed": 2
+    },
+    {
+      "label": "Lothian",
+      "confirmed": 2
+    },
+    {
+      "label": "Lanarkshire",
+      "confirmed": 2
     }
   ]
 }

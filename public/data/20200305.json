@@ -34,6 +34,10 @@
     {
       "label": "To be determined",
       "confirmed": 4
+    },
+    {
+      "label": "Scotland",
+      "confirmed": 6
     }
   ],
   "authorities": []
