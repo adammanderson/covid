@@ -10,8 +10,8 @@ const Shell: React.FC = ({
 }) => (
   <ThemeProvider theme={theme}>
     <Head>
-      <title>Covid-19 England, UK: Data Map</title>
-      <meta name="description" content="The latest PHE data map tracking COVID-19 in England, UK." />
+      <title>COVID-19 in the UK: Live data map</title>
+      <meta name="description" content="The latest data map tracking COVID-19 in the UK." />
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160202859-1" />
       <script
         dangerouslySetInnerHTML={{

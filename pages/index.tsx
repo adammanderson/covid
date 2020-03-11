@@ -78,7 +78,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
           }}
         >
           <Header
-            title="COVID-19 England"
+            title="COVID-19 UK"
             subtitle={`// ${format(activeDate, 'EEEE dd LLLL Y, kk:mm')}`}
           />
           <Totaler
