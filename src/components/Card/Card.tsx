@@ -27,6 +27,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({
       <Flex
         sx={{
           p: 3,
+          pb: 1,
           flexFlow: 'row nowrap',
           alignItems: ['flex-start', 'center'],
           justifyContent: action ? 'space-between' : 'space-around',

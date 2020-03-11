@@ -11,8 +11,7 @@ import { Corners } from '..';
 import { MapperProps } from '.';
 
 const Mapper: React.FC<MapperProps> = ({
-  regions,
-  authorities,
+  data,
 }) => {
   const breakpoint = useBreakpointIndex();
   const isMobile = breakpoint === 0;
@@ -30,31 +29,31 @@ const Mapper: React.FC<MapperProps> = ({
 
     // extend Leaflet to create a GeoJSON layer from a TopoJSON file
     (L as any).TopoJSON = L.GeoJSON.extend({
-      addData: function addData(data) {
+      addData: function addData(tdata) {
         let geojson;
 
-        if (data.type === 'Topology') {
-          Object.keys(data.objects).map((key): void => {
+        if (tdata.type === 'Topology') {
+          Object.keys(tdata.objects).map((key): void => {
             // eslint-disable-next-line no-prototype-builtins
-            if (data.objects.hasOwnProperty(key)) {
-              geojson = topojson.feature(data, data.objects[key]);
+            if (tdata.objects.hasOwnProperty(key)) {
+              geojson = topojson.feature(tdata, tdata.objects[key]);
               L.GeoJSON.prototype.addData.call(this, geojson);
             }
             return this;
           });
           return this;
         }
-        L.GeoJSON.prototype.addData.call(this, data);
+        L.GeoJSON.prototype.addData.call(this, tdata);
         return this;
       },
     });
 
-    (L as any).topoJson = (data, options) => new (L as any).TopoJSON(data, options);
+    (L as any).topoJson = (tdata, options) => new (L as any).TopoJSON(tdata, options);
 
     const geojson = (L as any).topoJson(null, {
       style: (feature) => {
         const featureLabel = feature.properties.AUTH;
-        const featureData = authorities.find((auth) => featureLabel.includes(auth.label));
+        const featureData = data.find((auth) => featureLabel.includes(auth.label));
         const confirmedPerc = featureData && (featureData.confirmed / 15);
         return {
           color: '#011017',
@@ -66,7 +65,7 @@ const Mapper: React.FC<MapperProps> = ({
       },
       onEachFeature: (feature, layer) => {
         const featureLabel = feature.properties.AUTH;
-        const featureData = authorities.find((auth) => featureLabel.includes(auth.label));
+        const featureData = data.find((auth) => featureLabel.includes(auth.label));
         layer.bindPopup(`<p>${feature.properties.AUTH}</p><span>${featureData ? featureData.confirmed : 'No data'}</span>`);
       },
     }).addTo(map);

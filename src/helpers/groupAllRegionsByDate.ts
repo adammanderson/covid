@@ -6,7 +6,7 @@ interface AccAttributes {
 }
 
 export function groupAllRegionsByDate(rawData: any) {
-  return Object.values(rawData).reduce((acc: AccAttributes[], { created, mortalityRate, regions }: any) => {
+  return Object.values(rawData).reduce((acc: AccAttributes[], { created, regions }: any) => {
     let r = {};
 
     regions.forEach(({ label, confirmed }: { label: string; confirmed: number }) => {

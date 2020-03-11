@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 interface AccAttributes {
   name: string;
   active?: string | number;
-  dead?: string | number;
+  deaths?: string | number;
   recovered?: string | number;
 }
 
@@ -13,7 +13,7 @@ export function groupRegionByDateName(rawData: any) {
     acc.push({
       name: format(new Date(created), 'dd/MM'),
       active: sumBy(regions, 'confirmed'),
-      dead: mortalityRate,
+      deaths: mortalityRate,
     });
 
     return acc;

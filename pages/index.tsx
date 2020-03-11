@@ -40,8 +40,11 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const activeDate = new Date(created);
   const confirmedByAuthority = authorities.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
   const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
-  const totalActiveByRegion = { label: 'active cases', value: sumBy(regions, 'confirmed') };
-  const totalDead = { label: 'dead', value: mortalityRate };
+  const totalActiveByRegion = { label: 'active', value: sumBy(regions, 'confirmed') };
+  const totalDeaths = { label: 'deaths', value: mortalityRate };
+  const totalCasesEngland = { label: 'England', value: sumBy(regions.filter((r) => !['Wales', 'Scotland'].includes(r.label)), 'confirmed') };
+  const totalCasesWales = { label: 'Wales', value: regions.find((r) => r.label === 'Wales')?.confirmed };
+  const totalCasesScotland = { label: 'Scotland', value: regions.find((r) => r.label === 'Scotland')?.confirmed };
   const regionDataByDateName = groupRegionByDateName(data);
   const allRegionsByDate = groupAllRegionsByDate(data);
 
@@ -82,33 +85,27 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
             title="Latest cases"
             data={[
               totalActiveByRegion,
-              totalDead,
+              totalDeaths,
+            ]}
+          />
+          <Totaler
+            data={[
+              totalCasesEngland,
+              totalCasesWales,
+              totalCasesScotland,
             ]}
           />
           <Bar
-            data={regionDataByDateName}
-            fixed
-            lines={[
-              {
-                dataKey: 'active',
-                color: 'yellow',
-              },
-              {
-                dataKey: 'dead',
-                color: 'red',
-              },
-            ]}
-          />
-          <Bar
-            title="Cases by region"
             data={allRegionsByDate}
             height="100%"
             legend={false}
           />
         </Flex>
         <Mapper
-          regions={regions}
-          authorities={authorities}
+          data={[
+            ...regions,
+            ...authorities,
+          ]}
         />
         <Flex
           sx={{
@@ -116,6 +113,21 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
             flexBasis: '350px',
           }}
         >
+          <Bar
+            data={regionDataByDateName}
+            fixed
+            height={150}
+            lines={[
+              {
+                dataKey: 'active',
+                color: 'yellow',
+              },
+              {
+                dataKey: 'deaths',
+                color: 'red',
+              },
+            ]}
+          />
           <DataList
             title="by region"
             data={confirmedByRegion}

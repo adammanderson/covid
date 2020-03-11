@@ -7,5 +7,5 @@ export interface TotalerItemProps {
 
 export interface TotalerProps {
   data: TotalerItemProps[];
-  title: string;
+  title?: string;
 }

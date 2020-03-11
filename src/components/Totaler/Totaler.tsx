@@ -12,10 +12,12 @@ const TotalerItem = ({ label, value }: TotalerItemProps) => {
   return (
     <Flex
       sx={{
-        flexFlow: 'column wrap',
+        flex: 1,
+        display: 'flex',
+        flexFlow: 'column',
         alignItems: 'center',
         px: 4,
-        mb: 3,
+        my: 3,
         borderRight: 1,
         ':last-of-type': {
           borderRight: 'none',
