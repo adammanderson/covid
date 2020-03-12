@@ -66,7 +66,7 @@ const Mapper: React.FC<MapperProps> = ({
       onEachFeature: (feature, layer) => {
         const featureLabel = feature.properties.AUTH;
         const featureData = data.find((auth) => featureLabel.includes(auth.label));
-        layer.bindPopup(`<p>${feature.properties.AUTH}</p><span>${featureData ? featureData.value : 'Awaiting data'}</span>`);
+        layer.bindPopup(`<p>${feature.properties.AUTH}</p><span>${featureData ? featureData.value : 'No reported cases'}</span>`);
       },
     }).addTo(map);
 
