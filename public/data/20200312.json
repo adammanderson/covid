@@ -1,0 +1,133 @@
+{
+  "created": "2020-03-12T15:32:00.511Z",
+  "countries": [
+    {
+      "name": "England",
+      "source": "Public Health England (PHE)",
+      "mortalityRate": 8,
+      "regions": {
+        "updatedAt": "2020-03-12T15:32:00.511Z",
+        "data": [
+          {
+            "label": "East of England",
+            "confirmed": 32
+          },
+          {
+            "label": "London",
+            "confirmed": 136
+          },
+          {
+            "label": "Midlands",
+            "confirmed": 44
+          },
+          {
+            "label": "North East and Yorkshire",
+            "confirmed": 44
+          },
+          {
+            "label": "North West",
+            "confirmed": 53
+          },
+          {
+            "label": "South East",
+            "confirmed": 83
+          },
+          {
+            "label": "South West",
+            "confirmed": 42
+          },
+          {
+            "label": "To be determined",
+            "confirmed": 57
+          }
+        ]
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    },
+    {
+      "name": "Scotland",
+      "source": "Scottish Government (Riaghaltas na h-Alba)",
+      "mortalityRate": null,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": "2020-03-12T15:32:00.511Z",
+        "data": [
+          {
+            "label": "Ayrshire and Arran",
+            "confirmed": 4
+          },
+          {
+            "label": "Borders",
+            "confirmed": 2
+          },
+          {
+            "label": "Fife",
+            "confirmed": 3
+          },
+          {
+            "label": "Forth Valley",
+            "confirmed": 6
+          },
+          {
+            "label": "Grampian",
+            "confirmed": 7
+          },
+          {
+            "label": "Greater Glasgow and Clyde",
+            "confirmed": 10
+          },
+          {
+            "label": "Lanarkshire",
+            "confirmed": 7
+          },
+          {
+            "label": "Lothian",
+            "confirmed": 11
+          },
+          {
+            "label": "Shetland",
+            "confirmed": 6
+          },
+          {
+            "label": "Tayside",
+            "confirmed": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wales",
+      "source": "Public Health Wales (lechyd Cyhoeddus Cymru)",
+      "mortalityRate": null,
+      "totalCases": 19,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    },
+    {
+      "name": "Northern Ireland",
+      "source": "HSC Public Health Agency",
+      "mortalityRate": null,
+      "totalCases": 18,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    }
+  ]
+}
