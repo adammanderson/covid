@@ -4,7 +4,7 @@ export default {
     lineHeight: 1.2,
     color: 'text',
     fontWeight: 'bold',
-    fontSize: [1, 2],
+    fontSize: 1,
     textTransform: 'uppercase',
   },
   primary: {

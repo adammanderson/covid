@@ -1,11 +1,59 @@
 {
-  "source": "Public Health England (PHE)",
-  "created": "2020-03-10T14:19:25.000+00:00",
-  "mortalityRate": 6,
-  "regions": [
+  "created": null,
+  "countries": [
     {
-      "region": "London",
-      "authorities": []
+      "name": "England",
+      "source": "Public Health England (PHE)",
+      "mortalityRate": null,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    },
+    {
+      "name": "Scotland",
+      "source": "Scottish Government (Riaghaltas na h-Alba)",
+      "mortalityRate": null,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    },
+    {
+      "name": "Wales",
+      "source": "Public Health Wales (lechyd Cyhoeddus Cymru)",
+      "mortalityRate": null,
+      "totalCases": 0,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    },
+    {
+      "name": "Northern Ireland",
+      "source": "HSC Public Health Agency",
+      "mortalityRate": null,
+      "totalCases": 0,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
     }
   ]
 }

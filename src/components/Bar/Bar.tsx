@@ -19,7 +19,7 @@ const Bar: React.SFC<BarProps> = ({
   lines,
   fixed,
   height = 220,
-  legend = true,
+  legend = false,
 }) => {
   const breakpoint = useBreakpointIndex();
   const [isMobile, setIsMobile] = React.useState(false);

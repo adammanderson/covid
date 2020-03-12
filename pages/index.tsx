@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import { format } from 'date-fns';
 import { Flex, Link, Text } from 'theme-ui';
 import sumBy from 'lodash/sumBy';
+import { DataAttributes } from '../src/types';
 import {
   Shell,
   DataList,
@@ -15,36 +16,24 @@ import {
 } from '../src/components';
 import {
   fetchData,
-  groupRegionByDateName,
-  groupAllRegionsByDate,
+  getLocalitiesByDate,
+  getCountryTotalsByDate,
+  getCountryTotals,
+  getGroupedCases,
 } from '../src/helpers';
 
-interface DataAttributes {
-  created: string;
-  mortalityRate: number;
-  authorities: any[];
-  regions: any[];
-}
 
 const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const [loading, setLoading] = React.useState(false);
   const [data, setData] = React.useState(serverData);
   const {
     created,
-    mortalityRate,
-    authorities,
-    regions,
+    countries,
   } = data[data.length - 1];
   const activeDate = new Date(created);
-  const confirmedByAuthority = authorities.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
-  const confirmedByRegion = regions.map(({ label, confirmed }) => ({ key: label, value: confirmed }));
-  const totalActiveByRegion = { label: 'active', value: sumBy(regions, 'confirmed') };
-  const totalDeaths = { label: 'deaths', value: mortalityRate };
-  const totalCasesEngland = { label: 'England', value: sumBy(regions.filter((r) => !['Wales', 'Scotland', 'Northern Ireland'].includes(r.label)), 'confirmed') };
-  const totalCasesWales = { label: 'Wales', value: regions.find((r) => r.label === 'Wales')?.confirmed };
-  const totalCasesScotland = { label: 'Scotland', value: regions.find((r) => r.label === 'Scotland')?.confirmed };
-  const regionDataByDateName = groupRegionByDateName(data);
-  const allRegionsByDate = groupAllRegionsByDate(data);
+  const totalCases = { label: 'active', value: sumBy(getCountryTotals(countries), 'confirmed') };
+  const totalDeaths = { label: 'deaths', value: sumBy(getCountryTotals(countries), 'deaths') };
+  const totalsByCountry = getCountryTotals(countries).map(({ label, confirmed }) => ({ label, value: confirmed }));
 
   const handleFetchData = async () => {
     setLoading(true);
@@ -82,27 +71,24 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
           <Totaler
             title="Latest cases"
             data={[
-              totalActiveByRegion,
+              totalCases,
               totalDeaths,
             ]}
           />
           <Totaler
-            data={[
-              totalCasesEngland,
-              totalCasesScotland,
-              totalCasesWales,
-            ]}
+            data={totalsByCountry}
           />
           <Bar
-            data={allRegionsByDate}
+            title="Cases by English Region"
+            data={getLocalitiesByDate(data, 'regions')}
             height="100%"
-            legend={false}
           />
         </Flex>
         <Mapper
           data={[
-            ...regions,
-            ...authorities,
+            ...getGroupedCases(countries, 'regions'),
+            ...getGroupedCases(countries, 'authorities'),
+            ...totalsByCountry,
           ]}
         />
         <Flex
@@ -112,27 +98,40 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
           }}
         >
           <Bar
-            data={regionDataByDateName}
+            title="Cases/deaths by country"
+            data={getCountryTotalsByDate(data)}
             fixed
             height={150}
             lines={[
               {
-                dataKey: 'active',
+                dataKey: 'England',
                 color: 'yellow',
               },
               {
-                dataKey: 'deaths',
+                dataKey: 'Scotland',
+                color: 'yellow',
+              },
+              {
+                dataKey: 'Wales',
+                color: 'yellow',
+              },
+              {
+                dataKey: 'Northern Ireland',
+                color: 'yellow',
+              },
+              {
+                dataKey: 'Deaths',
                 color: 'red',
               },
             ]}
           />
           <DataList
             title="by region"
-            data={confirmedByRegion}
+            data={getGroupedCases(countries, 'regions')}
           />
           <DataList
             title="by authority"
-            data={confirmedByAuthority}
+            data={getGroupedCases(countries, 'authorities')}
           />
         </Flex>
       </Flex>
