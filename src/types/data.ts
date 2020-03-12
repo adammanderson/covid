@@ -3,7 +3,7 @@ export interface DataAttributes {
   countries: CountryAttributes[];
 }
 
-export type CountryAttributes = {
+export interface CountryAttributes {
   name: string;
   mortalityRate: number;
   createdAt: string;
@@ -12,12 +12,14 @@ export type CountryAttributes = {
   regions: LocalityAttributes;
 }
 
-interface LocalityAttributes {
+export type LocalityKeys = 'regions' | 'authorities';
+
+export interface LocalityAttributes {
   updatedAt: string;
   data: DataItemAttributes[];
 }
 
-type DataItemAttributes = {
+export type DataItemAttributes = {
   label: string;
   confirmed: number;
 }

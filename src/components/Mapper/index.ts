@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { ListAttributes } from '../../types';
 
 export const Mapper = dynamic(
   () => import('./Mapper'),
@@ -6,5 +7,5 @@ export const Mapper = dynamic(
 );
 
 export interface MapperProps {
-  data: any;
+  data: ListAttributes[];
 }

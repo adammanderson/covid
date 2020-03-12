@@ -7,13 +7,15 @@ export function getCountryTotals(countries: CountryAttributes[], country?: strin
   return data.map(({
     name,
     totalCases,
+    mortalityRate,
     authorities,
     regions,
   }) => ({
     label: name,
-    value: sumBy(
-      (authorities.data.length && authorities.data) ||
-      (regions.data.length && regions.data),
+    deaths: mortalityRate,
+    confirmed: sumBy(
+      (authorities.data.length && authorities.data)
+      || (regions.data.length && regions.data),
       'confirmed',
     ) || totalCases,
   }));

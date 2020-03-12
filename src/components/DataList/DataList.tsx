@@ -30,11 +30,11 @@ const DataList: React.SFC<DataListProps> = ({
       title={title}
       action={<Button onClick={(): void => setActiveFilter(newFilter)}>{newFilter}</Button>}
     >
-      {data.length ? ordered.map(({ key, value }) => {
-        const isWarning = value > 30;
+      {data.length ? ordered.map(({ label, value }) => {
+        const isWarning = value > 50;
         return (
           <ListItem
-            key={key}
+            key={label}
           >
             <Text variant="primary">
               <Text
@@ -50,7 +50,7 @@ const DataList: React.SFC<DataListProps> = ({
                   {value}
                 </motion.span>
               </Text>
-              {key}
+              {label}
             </Text>
           </ListItem>
         );

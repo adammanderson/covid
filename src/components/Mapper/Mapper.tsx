@@ -54,7 +54,7 @@ const Mapper: React.FC<MapperProps> = ({
       style: (feature) => {
         const featureLabel = feature.properties.AUTH;
         const featureData = data.find((auth) => featureLabel.includes(auth.label));
-        const confirmedPerc = featureData && (featureData.confirmed / 15);
+        const confirmedPerc = featureData && (featureData.value / 30);
         return {
           color: 'rgba(0, 0, 0, 0.4)',
           opacity: 1,
@@ -66,7 +66,7 @@ const Mapper: React.FC<MapperProps> = ({
       onEachFeature: (feature, layer) => {
         const featureLabel = feature.properties.AUTH;
         const featureData = data.find((auth) => featureLabel.includes(auth.label));
-        layer.bindPopup(`<p>${feature.properties.AUTH}</p><span>${featureData ? featureData.confirmed : 'Awaiting data'}</span>`);
+        layer.bindPopup(`<p>${feature.properties.AUTH}</p><span>${featureData ? featureData.value : 'Awaiting data'}</span>`);
       },
     }).addTo(map);
 
