@@ -15,8 +15,13 @@ export function getCountryTotalsByDate(data: DataAttributes[]) {
   return data.reduce((acc: AccAttributes[], { created, countries }: DataAttributes) => {
     let r = {};
 
-    countries.forEach(({ name, regions, authorities, totalCases }: CountryAttributes) => {
-      const localityData = (authorities.data.length && authorities.data) || (regions.data.length && regions.data);
+    countries.forEach(({
+      name,
+      regions,
+      authorities,
+      totalCases,
+    }: CountryAttributes) => {
+      const localityData = (regions.data.length && regions.data) || (authorities.data.length && authorities.data);
       const totalConfirmed = sumBy(localityData, 'confirmed') || totalCases;
 
       r = { ...r, [name]: totalConfirmed };

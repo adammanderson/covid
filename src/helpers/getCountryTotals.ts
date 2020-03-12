@@ -14,8 +14,8 @@ export function getCountryTotals(countries: CountryAttributes[], country?: strin
     label: name,
     deaths: mortalityRate,
     confirmed: sumBy(
-      (authorities.data.length && authorities.data)
-      || (regions.data.length && regions.data),
+      (regions.data.length && regions.data)
+      || (authorities.data.length && authorities.data),
       'confirmed',
     ) || totalCases,
   }));
