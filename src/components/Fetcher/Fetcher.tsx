@@ -12,6 +12,8 @@ const Fetcher: React.FC<FetcherProps> = ({
   return (
     <Wifi
       style={{
+        flexShrink: 0,
+        marginLeft: 10,
         cursor: 'pointer',
       }}
       size={18}

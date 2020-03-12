@@ -6,6 +6,7 @@ export interface DataAttributes {
 export interface CountryAttributes {
   name: string;
   mortalityRate: number;
+  source: string;
   createdAt: string;
   totalCases?: number;
   authorities: LocalityAttributes;

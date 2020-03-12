@@ -12,7 +12,7 @@ const Notice: React.FC = ({
       display: 'flex',
       flexFlow: 'row nowrap',
       justifyContent: 'space-between',
-      alignItems: 'center',
+      alignItems: ['flex-start', 'center'],
       py: 2,
       m: 2,
       mb: 0,
