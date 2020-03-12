@@ -4,7 +4,7 @@
     {
       "name": "England",
       "source": "Public Health England (PHE)",
-      "mortalityRate": 8,
+      "mortalityRate": 10,
       "regions": {
         "updatedAt": "2020-03-12T15:32:00.511Z",
         "data": [
