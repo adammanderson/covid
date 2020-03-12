@@ -26,14 +26,11 @@ import {
 const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const [loading, setLoading] = React.useState(false);
   const [data, setData] = React.useState(serverData);
-  const {
-    created,
-    countries,
-  } = data[data.length - 1];
+  const { created, countries } = data[data.length - 1];
   const activeDate = new Date(created);
-  const totalCases = { label: 'active', value: sumBy(getCountryTotals(countries), 'confirmed') };
-  const totalDeaths = { label: 'deaths', value: sumBy(getCountryTotals(countries), 'deaths') };
-  const totalsByCountry = getCountryTotals(countries).map(({ label, confirmed }) => ({ label, value: confirmed }));
+  const totalCases = { label: 'active', value: sumBy(getCountryTotals(data), 'confirmed') };
+  const totalDeaths = { label: 'deaths', value: sumBy(getCountryTotals(data), 'deaths') };
+  const totalsByCountry = getCountryTotals(data).map(({ label, confirmed }) => ({ label, value: confirmed }));
 
   const handleFetchData = async () => {
     setLoading(true);
@@ -86,8 +83,8 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
         </Flex>
         <Mapper
           data={[
-            ...getGroupedCases(countries, 'regions'),
-            ...getGroupedCases(countries, 'authorities'),
+            ...getGroupedCases(data, 'regions'),
+            ...getGroupedCases(data, 'authorities'),
             ...totalsByCountry,
           ]}
         />
@@ -127,11 +124,11 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
           />
           <DataList
             title="by region"
-            data={getGroupedCases(countries, 'regions')}
+            data={getGroupedCases(data, 'regions')}
           />
           <DataList
             title="by authority"
-            data={getGroupedCases(countries, 'authorities')}
+            data={getGroupedCases(data, 'authorities')}
           />
         </Flex>
       </Flex>

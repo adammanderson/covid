@@ -7,6 +7,8 @@ const ListItem: React.SFC = ({
 }) => (
   <div
     sx={{
+      display: 'flex',
+      alignItems: 'center',
       py: 2,
       px: 3,
       transition: 'all 200ms ease-in-out 0s',

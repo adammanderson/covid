@@ -6,6 +6,7 @@ import orderBy from 'lodash/orderBy';
 import { DataListProps } from '.';
 import { scrollToTop } from '../../helpers';
 import {
+  Adjuster,
   Card,
   ListItem,
 } from '..';
@@ -19,7 +20,6 @@ const DataList: React.SFC<DataListProps> = ({
   const [activeFilter, setActiveFilter] = React.useState('value');
   const newFilter = activeFilter === 'key' ? 'value' : 'key';
   const ordered = orderBy(data, activeFilter, activeFilter === 'key' ? 'asc' : 'desc');
-
   React.useEffect(() => {
     scrollToTop(dataListRef.current);
   }, [activeFilter]);
@@ -30,7 +30,7 @@ const DataList: React.SFC<DataListProps> = ({
       title={title}
       action={<Button onClick={(): void => setActiveFilter(newFilter)}>{newFilter}</Button>}
     >
-      {data.length ? ordered.map(({ label, value }) => {
+      {data.length ? ordered.map(({ label, value, adjustment }) => {
         const isWarning = value > 50;
         return (
           <ListItem
@@ -52,6 +52,7 @@ const DataList: React.SFC<DataListProps> = ({
               </Text>
               {label}
             </Text>
+            <Adjuster value={adjustment} />
           </ListItem>
         );
       }) : (

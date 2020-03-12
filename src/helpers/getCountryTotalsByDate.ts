@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import sumBy from 'lodash/sumBy';
-
+import { getConfirmedByCountry } from './getConfirmedByCountry';
 import {
   CountryAttributes,
   DataAttributes,
@@ -15,16 +15,10 @@ export function getCountryTotalsByDate(data: DataAttributes[]) {
   return data.reduce((acc: AccAttributes[], { created, countries }: DataAttributes) => {
     let r = {};
 
-    countries.forEach(({
-      name,
-      regions,
-      authorities,
-      totalCases,
-    }: CountryAttributes) => {
-      const localityData = (regions.data.length && regions.data) || (authorities.data.length && authorities.data);
-      const totalConfirmed = sumBy(localityData, 'confirmed') || totalCases;
+    countries.forEach((country: CountryAttributes) => {
+      const { name } = country;
 
-      r = { ...r, [name]: totalConfirmed };
+      r = { ...r, [name]: getConfirmedByCountry(country) };
     });
 
     acc.push({

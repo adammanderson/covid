@@ -6,3 +6,4 @@ export * from './getCountryTotals';
 export * from './getGroupedCases';
 export * from './getLocalitiesByDate';
 export * from './getCountryTotalsByDate';
+export * from './getConfirmedByCountry';
