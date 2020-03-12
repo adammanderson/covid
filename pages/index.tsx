@@ -142,16 +142,10 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
         }}
       >
         <Notice>
-          <Text variant="small">
-            Data sourced from
+          <Text variant="tiny">
+            Data sources:
             {' '}
-            <Link
-              href="https://www.gov.uk/government/organisations/public-health-england"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Public Health England (PHE), UK Government
-            </Link>
+            {countries.map((c) => c.source).join('/')}
             . Do not rely on this data for medical guidance.
             Data is subject to changes/corrections.
           </Text>

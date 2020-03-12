@@ -14,6 +14,10 @@ export default {
     color: 'accent',
     fontSize: 0,
   },
+  tiny: {
+    color: 'accent',
+    fontSize: '0.75em',
+  },
   inlineBold: {
     display: 'inline',
     color: 'text',
