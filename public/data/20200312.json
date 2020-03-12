@@ -105,7 +105,7 @@
       "name": "Wales",
       "source": "Public Health Wales (lechyd Cyhoeddus Cymru)",
       "mortalityRate": null,
-      "totalCases": 19,
+      "totalCases": 25,
       "regions": {
         "updatedAt": null,
         "data": []
@@ -119,7 +119,7 @@
       "name": "Northern Ireland",
       "source": "HSC Public Health Agency",
       "mortalityRate": null,
-      "totalCases": 18,
+      "totalCases": 20,
       "regions": {
         "updatedAt": null,
         "data": []
