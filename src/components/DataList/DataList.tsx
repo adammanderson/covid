@@ -18,8 +18,9 @@ const DataList: React.SFC<DataListProps> = ({
   const { theme: { colors } } = useThemeUI();
   const dataListRef = React.useRef(null);
   const [activeFilter, setActiveFilter] = React.useState('value');
-  const newFilter = activeFilter === 'key' ? 'value' : 'key';
+  const newFilter = activeFilter === 'label' ? 'value' : 'label';
   const ordered = orderBy(data, activeFilter, activeFilter === 'key' ? 'asc' : 'desc');
+
   React.useEffect(() => {
     scrollToTop(dataListRef.current);
   }, [activeFilter]);

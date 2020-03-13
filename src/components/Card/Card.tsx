@@ -19,7 +19,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({
 }, ref) => (
   <TCard
     sx={{
-      flexGrow: fixed ? 0 : 1,
+      flex: fixed ? '0 0 auto' : '1 1 auto',
     }}
   >
     <Corners />

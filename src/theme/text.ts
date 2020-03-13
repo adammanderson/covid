@@ -16,7 +16,7 @@ export default {
   },
   tiny: {
     color: 'accent',
-    fontSize: '0.75em',
+    fontSize: '12px',
   },
   inlineBold: {
     display: 'inline',

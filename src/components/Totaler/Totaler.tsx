@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { jsx, Text, Flex, useThemeUI } from 'theme-ui';
 import { TotalerProps, TotalerItemProps } from '.';
 import { Card } from '../Card';
+import { Adjuster } from '../Adjuster';
 
-const TotalerItem = ({ label, value }: TotalerItemProps) => {
+const TotalerItem = ({ label, value, adjustment }: TotalerItemProps) => {
   const { theme: { colors } } = useThemeUI();
   const isActive = label.includes('active');
 
@@ -27,6 +28,10 @@ const TotalerItem = ({ label, value }: TotalerItemProps) => {
       <Text
         variant="large"
         sx={{
+          display: 'flex',
+          flexDirection: ['column', 'row'],
+          alignItems: 'flex-start',
+          lineHeight: 1,
           color: isActive ? colors?.secondary : colors?.text,
         }}
       >
@@ -36,11 +41,13 @@ const TotalerItem = ({ label, value }: TotalerItemProps) => {
         >
           {value}
         </motion.span>
+        <Adjuster value={adjustment} />
       </Text>
       <Text
         variant="upper"
         sx={{
           textAlign: 'center',
+          pt: 2,
         }}
       >
         {label}
@@ -52,24 +59,26 @@ const TotalerItem = ({ label, value }: TotalerItemProps) => {
 const Totaler: React.SFC<TotalerProps> = ({
   data,
   title,
+  fixed = false,
 }) => {
   const filteredData = data.filter(({ value }) => !!value);
 
   return (
     <Card
       title={title}
-      fixed
+      fixed={fixed}
     >
       <Flex
         sx={{
           justifyContent: 'center',
         }}
       >
-        {filteredData.length ? filteredData.map(({ label, value }) => (
+        {filteredData.length ? filteredData.map(({ label, value, adjustment }) => (
           <TotalerItem
             key={label}
             label={label}
             value={value}
+            adjustment={adjustment}
           />
         )) : (
           <Text variant="upper" sx={{ p: 3, pt: 0, textAlign: 'center' }}>Data not yet ready</Text>
