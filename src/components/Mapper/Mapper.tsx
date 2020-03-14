@@ -75,7 +75,7 @@ const Mapper: React.FC<MapperProps> = ({
     map.on('popupopen', (e) => {
       (window as any).gtag('event', 'click', {
         event_category: 'mapper',
-        event_label: e.target._popup._source.feature.properties.NUTS112NM,
+        event_label: e.target._popup._source.feature.properties.AUTH,
       });
     });
 
