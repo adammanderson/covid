@@ -39,7 +39,7 @@ const TotalerItem = ({ label, value, adjustment }: TotalerItemProps) => {
           animate={isActive ? { opacity: [0.6, 1, 0.6] } : {}}
           transition={{ duration: 1, loop: Infinity }}
         >
-          {value}
+          {value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
         </motion.span>
         <Adjuster value={adjustment} />
       </Text>
