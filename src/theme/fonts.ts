@@ -1,5 +1,5 @@
 export default {
-  body: '"Space Mono", monospace',
-  heading: '"Space Mono", monospace',
+  body: '"Saira", sans-serif',
+  heading: '"Saira", sans-serif',
   monospace: 'Menlo, monospace',
 };
