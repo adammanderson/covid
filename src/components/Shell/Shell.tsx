@@ -37,7 +37,7 @@ const Shell: React.FC = ({
     </Head>
     <Flex
       sx={{
-        p: [1, 10],
+        p: 1,
         flexDirection: 'column',
         height: ['auto', '100vh'],
         justifyContent: 'space-between',

@@ -5,7 +5,6 @@ export default {
     flexFlow: 'column nowrap',
     position: 'relative',
     m: 10,
-    border: 0,
-    bg: 'background',
+    bg: 'backgroundMuted',
   },
 };

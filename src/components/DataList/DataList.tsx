@@ -32,7 +32,7 @@ const DataList: React.SFC<DataListProps> = ({
       action={<Button onClick={(): void => setActiveFilter(newFilter)}>{newFilter}</Button>}
     >
       {data.length ? ordered.map(({ label, value, adjustment }) => {
-        const isWarning = value > 50;
+        const isWarning = value > 200;
         return (
           <ListItem
             key={label}

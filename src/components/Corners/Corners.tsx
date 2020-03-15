@@ -9,7 +9,7 @@ const Corners: React.SFC = () => {
   return (
     <div>
       <Icons.CornerUpLeft
-        size={32}
+        size={20}
         color={colors?.accent}
         background={colors?.background}
         sx={{
@@ -19,7 +19,7 @@ const Corners: React.SFC = () => {
         }}
       />
       <Icons.CornerUpRight
-        size={32}
+        size={20}
         color={colors?.accent}
         background={colors?.background}
         sx={{
@@ -29,7 +29,7 @@ const Corners: React.SFC = () => {
         }}
       />
       <Icons.CornerDownLeft
-        size={32}
+        size={20}
         color={colors?.accent}
         background={colors?.background}
         sx={{
@@ -39,7 +39,7 @@ const Corners: React.SFC = () => {
         }}
       />
       <Icons.CornerDownRight
-        size={32}
+        size={20}
         color={colors?.accent}
         background={colors?.background}
         sx={{

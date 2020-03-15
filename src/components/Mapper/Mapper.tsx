@@ -17,7 +17,7 @@ const Mapper: React.FC<MapperProps> = ({
   const isMobile = breakpoint === 0;
 
   React.useEffect(() => {
-    const position: LatLngTuple = [(isMobile ? 53 : 54.5), -2];
+    const position: LatLngTuple = [(isMobile ? 53 : 54.5), -3];
     const map = L.map('map-container', { dragging: !L.Browser.mobile });
     const bgLayer = L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png', {
       attribution: '',
@@ -59,7 +59,7 @@ const Mapper: React.FC<MapperProps> = ({
           color: 'rgba(0, 0, 0, 0.4)',
           opacity: 1,
           weight: 1,
-          fillColor: confirmedPerc ? `rgba(255, 0, 0, ${confirmedPerc})` : 'transparent',
+          fillColor: confirmedPerc ? `rgba(255, 0, 0, ${confirmedPerc})` : 'rgba(0, 0, 0, 0.4)',
           fillOpacity: 0.8,
         };
       },
