@@ -8,9 +8,9 @@ const Adjuster: React.SFC<AdjusterProps> = ({
   value,
 }) => {
   const { theme: { colors } } = useThemeUI();
-  const isNegative = Math.sign(value) < 0;
+  const isPositive = Math.sign(value) > 0;
 
-  return !!value && (
+  return isPositive && (
     <Text
       variant="tiny"
       sx={{
@@ -18,14 +18,10 @@ const Adjuster: React.SFC<AdjusterProps> = ({
         ml: 'auto',
         alignItems: 'center',
         fontWeight: 'bold',
-        color: isNegative ? 'primary' : 'secondary',
+        color: 'secondary',
       }}
     >
-      {isNegative ? (
-        <ArrowDown color={colors?.primary} size={16} />
-      ) : (
-        <ArrowUp color={colors?.secondary} size={16} />
-      )}
+      <ArrowUp color={colors?.secondary} size={16} />
       {value}
     </Text>
   );
