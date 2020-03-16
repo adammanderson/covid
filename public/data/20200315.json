@@ -1,0 +1,674 @@
+{
+  "created": "2020-03-15T18:00:00.511Z",
+  "countries": [
+    {
+      "name": "England",
+      "source": "Public Health England (PHE)",
+      "mortalityRate": 34,
+      "regions": {
+        "updatedAt": "2020-03-15T18:00:00.511Z",
+        "data": [
+          {
+            "label": "London",
+            "confirmed": 407
+          },
+          {
+            "label": "South East",
+            "confirmed": 175
+          },
+          {
+            "label": "Midlands",
+            "confirmed": 94
+          },
+          {
+            "label": "North East and Yorkshire",
+            "confirmed": 91
+          },
+          {
+            "label": "North West",
+            "confirmed": 76
+          },
+          {
+            "label": "East of England",
+            "confirmed": 71
+          },
+          {
+            "label": "South West",
+            "confirmed": 61
+          },
+          {
+            "label": "To be confirmed",
+            "confirmed": 124
+          }
+        ]
+      },
+      "authorities": {
+        "updatedAt": "2020-03-15T18:00:00.511Z",
+        "data": [
+          {
+            "label": "Hampshire",
+            "confirmed": 53
+          },
+          {
+            "label": "Kensington and Chelsea",
+            "confirmed": 40
+          },
+          {
+            "label": "Westminster",
+            "confirmed": 35
+          },
+          {
+            "label": "Hertfordshire",
+            "confirmed": 32
+          },
+          {
+            "label": "Southwark",
+            "confirmed": 30
+          },
+          {
+            "label": "Lambeth",
+            "confirmed": 26
+          },
+          {
+            "label": "Barnet",
+            "confirmed": 25
+          },
+          {
+            "label": "Oxfordshire",
+            "confirmed": 24
+          },
+          {
+            "label": "Surrey",
+            "confirmed": 23
+          },
+          {
+            "label": "Camden",
+            "confirmed": 22
+          },
+          {
+            "label": "Brent",
+            "confirmed": 20
+          },
+          {
+            "label": "Ealing",
+            "confirmed": 20
+          },
+          {
+            "label": "Leeds",
+            "confirmed": 19
+          },
+          {
+            "label": "Hammersmith and Fulham",
+            "confirmed": 19
+          },
+          {
+            "label": "Wandsworth",
+            "confirmed": 17
+          },
+          {
+            "label": "Buckinghamshire",
+            "confirmed": 15
+          },
+          {
+            "label": "Devon",
+            "confirmed": 15
+          },
+          {
+            "label": "Essex",
+            "confirmed": 14
+          },
+          {
+            "label": "Greenwich",
+            "confirmed": 13
+          },
+          {
+            "label": "Hackney and City of London",
+            "confirmed": 13
+          },
+          {
+            "label": "Sheffield",
+            "confirmed": 12
+          },
+          {
+            "label": "Harrow",
+            "confirmed": 12
+          },
+          {
+            "label": "Haringey",
+            "confirmed": 11
+          },
+          {
+            "label": "Lewisham",
+            "confirmed": 11
+          },
+          {
+            "label": "Derbyshire",
+            "confirmed": 11
+          },
+          {
+            "label": "Kent",
+            "confirmed": 11
+          },
+          {
+            "label": "Brighton and Hove",
+            "confirmed": 10
+          },
+          {
+            "label": "Hillingdon",
+            "confirmed": 10
+          },
+          {
+            "label": "Hounslow",
+            "confirmed": 10
+          },
+          {
+            "label": "Cumbria",
+            "confirmed": 10
+          },
+          {
+            "label": "Manchester",
+            "confirmed": 9
+          },
+          {
+            "label": "Liverpool",
+            "confirmed": 9
+          },
+          {
+            "label": "Merton",
+            "confirmed": 9
+          },
+          {
+            "label": "Tower Hamlets",
+            "confirmed": 9
+          },
+          {
+            "label": "Northamptonshire",
+            "confirmed": 9
+          },
+          {
+            "label": "Birmingham",
+            "confirmed": 8
+          },
+          {
+            "label": "Wolverhampton",
+            "confirmed": 8
+          },
+          {
+            "label": "Torbay",
+            "confirmed": 7
+          },
+          {
+            "label": "Barking and Dagenham",
+            "confirmed": 7
+          },
+          {
+            "label": "Bexley",
+            "confirmed": 7
+          },
+          {
+            "label": "Bromley",
+            "confirmed": 7
+          },
+          {
+            "label": "Sutton",
+            "confirmed": 7
+          },
+          {
+            "label": "Cambridgeshire",
+            "confirmed": 7
+          },
+          {
+            "label": "North Yorkshire",
+            "confirmed": 7
+          },
+          {
+            "label": "West Sussex",
+            "confirmed": 7
+          },
+          {
+            "label": "Windsor and Maidenhead",
+            "confirmed": 6
+          },
+          {
+            "label": "Trafford",
+            "confirmed": 6
+          },
+          {
+            "label": "Oldham",
+            "confirmed": 6
+          },
+          {
+            "label": "Bradford",
+            "confirmed": 6
+          },
+          {
+            "label": "Enfield",
+            "confirmed": 6
+          },
+          {
+            "label": "Gloucestershire",
+            "confirmed": 6
+          },
+          {
+            "label": "Lancashire",
+            "confirmed": 6
+          },
+          {
+            "label": "Leicestershire",
+            "confirmed": 6
+          },
+          {
+            "label": "Nottinghamshire",
+            "confirmed": 6
+          },
+          {
+            "label": "Staffordshire",
+            "confirmed": 6
+          },
+          {
+            "label": "Derby",
+            "confirmed": 5
+          },
+          {
+            "label": "Nottingham",
+            "confirmed": 5
+          },
+          {
+            "label": "Bristol, City of",
+            "confirmed": 5
+          },
+          {
+            "label": "Bracknell Forest",
+            "confirmed": 5
+          },
+          {
+            "label": "Wokingham",
+            "confirmed": 5
+          },
+          {
+            "label": "Cornwall and Isles of Scilly",
+            "confirmed": 5
+          },
+          {
+            "label": "Wiltshire",
+            "confirmed": 5
+          },
+          {
+            "label": "Bournemouth, Christchurch and Poole",
+            "confirmed": 5
+          },
+          {
+            "label": "Wirral",
+            "confirmed": 5
+          },
+          {
+            "label": "Barnsley",
+            "confirmed": 5
+          },
+          {
+            "label": "Walsall",
+            "confirmed": 5
+          },
+          {
+            "label": "Calderdale",
+            "confirmed": 5
+          },
+          {
+            "label": "Havering",
+            "confirmed": 5
+          },
+          {
+            "label": "Warwickshire",
+            "confirmed": 5
+          },
+          {
+            "label": "York",
+            "confirmed": 4
+          },
+          {
+            "label": "South Gloucestershire",
+            "confirmed": 4
+          },
+          {
+            "label": "Milton Keynes",
+            "confirmed": 4
+          },
+          {
+            "label": "Cheshire West and Chester",
+            "confirmed": 4
+          },
+          {
+            "label": "Shropshire",
+            "confirmed": 4
+          },
+          {
+            "label": "Newcastle upon Tyne",
+            "confirmed": 4
+          },
+          {
+            "label": "Dudley",
+            "confirmed": 4
+          },
+          {
+            "label": "Islington",
+            "confirmed": 4
+          },
+          {
+            "label": "Lincolnshire",
+            "confirmed": 4
+          },
+          {
+            "label": "Blackpool",
+            "confirmed": 3
+          },
+          {
+            "label": "East Riding of Yorkshire",
+            "confirmed": 3
+          },
+          {
+            "label": "Southend-on-Sea",
+            "confirmed": 3
+          },
+          {
+            "label": "West Berkshire",
+            "confirmed": 3
+          },
+          {
+            "label": "Reading",
+            "confirmed": 3
+          },
+          {
+            "label": "Slough",
+            "confirmed": 3
+          },
+          {
+            "label": "Central Bedfordshire",
+            "confirmed": 3
+          },
+          {
+            "label": "Bolton",
+            "confirmed": 3
+          },
+          {
+            "label": "Bury",
+            "confirmed": 3
+          },
+          {
+            "label": "Stockport",
+            "confirmed": 3
+          },
+          {
+            "label": "Tameside",
+            "confirmed": 3
+          },
+          {
+            "label": "Wigan",
+            "confirmed": 3
+          },
+          {
+            "label": "Kirklees",
+            "confirmed": 3
+          },
+          {
+            "label": "Newham",
+            "confirmed": 3
+          },
+          {
+            "label": "Suffolk",
+            "confirmed": 3
+          },
+          {
+            "label": "Worcestershire",
+            "confirmed": 3
+          },
+          {
+            "label": "Stockton-on-Tees",
+            "confirmed": 2
+          },
+          {
+            "label": "Darlington",
+            "confirmed": 2
+          },
+          {
+            "label": "North Lincolnshire",
+            "confirmed": 2
+          },
+          {
+            "label": "Leicester",
+            "confirmed": 2
+          },
+          {
+            "label": "Bath and North East Somerset",
+            "confirmed": 2
+          },
+          {
+            "label": "Plymouth",
+            "confirmed": 2
+          },
+          {
+            "label": "Swindon",
+            "confirmed": 2
+          },
+          {
+            "label": "Luton",
+            "confirmed": 2
+          },
+          {
+            "label": "Medway",
+            "confirmed": 2
+          },
+          {
+            "label": "Isle of Wight",
+            "confirmed": 2
+          },
+          {
+            "label": "Rochdale",
+            "confirmed": 2
+          },
+          {
+            "label": "Doncaster",
+            "confirmed": 2
+          },
+          {
+            "label": "Rotherham",
+            "confirmed": 2
+          },
+          {
+            "label": "North Tyneside",
+            "confirmed": 2
+          },
+          {
+            "label": "Coventry",
+            "confirmed": 2
+          },
+          {
+            "label": "Wakefield",
+            "confirmed": 2
+          },
+          {
+            "label": "Croydon",
+            "confirmed": 2
+          },
+          {
+            "label": "Kingston upon Thames",
+            "confirmed": 2
+          },
+          {
+            "label": "Richmond upon Thames",
+            "confirmed": 2
+          },
+          {
+            "label": "Waltham Forest",
+            "confirmed": 2
+          },
+          {
+            "label": "Somerset",
+            "confirmed": 2
+          },
+          {
+            "label": "Redcar and Cleveland",
+            "confirmed": 1
+          },
+          {
+            "label": "Warrington",
+            "confirmed": 1
+          },
+          {
+            "label": "Herefordshire, County of",
+            "confirmed": 1
+          },
+          {
+            "label": "Peterborough",
+            "confirmed": 1
+          },
+          {
+            "label": "Thurrock",
+            "confirmed": 1
+          },
+          {
+            "label": "Portsmouth",
+            "confirmed": 1
+          },
+          {
+            "label": "Southampton",
+            "confirmed": 1
+          },
+          {
+            "label": "County Durham",
+            "confirmed": 1
+          },
+          {
+            "label": "Cheshire East",
+            "confirmed": 1
+          },
+          {
+            "label": "Dorset",
+            "confirmed": 1
+          },
+          {
+            "label": "Salford",
+            "confirmed": 1
+          },
+          {
+            "label": "St. Helens",
+            "confirmed": 1
+          },
+          {
+            "label": "Sefton",
+            "confirmed": 1
+          },
+          {
+            "label": "Sunderland",
+            "confirmed": 1
+          },
+          {
+            "label": "Sandwell",
+            "confirmed": 1
+          },
+          {
+            "label": "Gateshead",
+            "confirmed": 1
+          },
+          {
+            "label": "Redbridge",
+            "confirmed": 1
+          },
+          {
+            "label": "East Sussex",
+            "confirmed": 1
+          },
+          {
+            "label": "Norfolk",
+            "confirmed": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Scotland",
+      "source": "Scottish Government (Riaghaltas na h-Alba)",
+      "mortalityRate": 1,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": "2020-03-15T18:00:00.511Z",
+        "data": [
+          {
+            "label": "Ayrshire and Arran",
+            "confirmed": 6
+          },
+          {
+            "label": "Borders",
+            "confirmed": 7
+          },
+          {
+            "label": "Fife",
+            "confirmed": 7
+          },
+          {
+            "label": "Forth Valley",
+            "confirmed": 10
+          },
+          {
+            "label": "Grampian",
+            "confirmed": 12
+          },
+          {
+            "label": "Greater Glasgow and Clyde",
+            "confirmed": 39
+          },
+          {
+            "label": "Highland",
+            "confirmed": 2
+          },
+          {
+            "label": "Lanarkshire",
+            "confirmed": 16
+          },
+          {
+            "label": "Lothian",
+            "confirmed": 28
+          },
+          {
+            "label": "Shetland",
+            "confirmed": 11
+          },
+          {
+            "label": "Tayside",
+            "confirmed": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wales",
+      "source": "Public Health Wales (lechyd Cyhoeddus Cymru)",
+      "mortalityRate": null,
+      "totalCases":94,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    },
+    {
+      "name": "NI",
+      "source": "HSC Public Health Agency",
+      "mortalityRate": null,
+      "totalCases": 45,
+      "regions": {
+        "updatedAt": null,
+        "data": []
+      },
+      "authorities": {
+        "updatedAt": null,
+        "data": []
+      }
+    }
+  ]
+}
