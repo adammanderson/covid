@@ -10,4 +10,5 @@ export * from './Bar';
 export * from './Notice';
 export * from './Mapper';
 export * from './Fetcher';
+export * from './Modal';
 export { default as Icons } from './Icons';

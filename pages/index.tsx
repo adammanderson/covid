@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NextPage } from 'next';
 import { format } from 'date-fns';
-import { Flex, Link, Text } from 'theme-ui';
+import { Flex, Text, Heading } from 'theme-ui';
 import sumBy from 'lodash/sumBy';
 import { DataAttributes } from '../src/types';
 import {
@@ -13,6 +13,7 @@ import {
   Notice,
   Mapper,
   Fetcher,
+  Modal,
 } from '../src/components';
 import {
   fetchData,
@@ -48,6 +49,14 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
 
   return (
     <Shell>
+      <Modal isOpen>
+        <Heading sx={{ mb: 2 }}>Advisory Notice</Heading>
+        <Text>
+          Public Health England and the UK Government have declared that they will &quot;prioritise tests for people who needed hospital care for
+          pneumonia or acute respiratory illness&quot;. Those with symptoms and self-isolating are not being tested. Given widespread
+          tracing is not taking place, this data will not accurately reflect actual total cases within communities in the UK.
+        </Text>
+      </Modal>
       <Flex
         sx={{
           flex: 1,
