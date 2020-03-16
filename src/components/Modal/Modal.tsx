@@ -24,7 +24,7 @@ const Modal: React.SFC<ModalProps> = ({
             left: 0,
             right: 0,
             background: 'rgba(0,0,0,0.7)',
-            zIndex: 998,
+            zIndex: 1001,
           }}
         >
           <Card fixed>
