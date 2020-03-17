@@ -4,7 +4,7 @@
     {
       "name": "England",
       "source": "Public Health England (PHE)",
-      "mortalityRate": 52,
+      "mortalityRate": 53,
       "regions": {
         "updatedAt": "2020-03-16T18:10:00.511Z",
         "data": [
@@ -591,7 +591,7 @@
     {
       "name": "Scotland",
       "source": "Scottish Government (Riaghaltas na h-Alba)",
-      "mortalityRate": 1,
+      "mortalityRate": 2,
       "regions": {
         "updatedAt": null,
         "data": []
