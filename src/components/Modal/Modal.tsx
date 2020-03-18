@@ -27,10 +27,15 @@ const Modal: React.SFC<ModalProps> = ({
             zIndex: 1001,
           }}
         >
-          <Card fixed>
+          <Card
+            fixed
+            sx={{
+              flex: '0 1 600px',
+              maxWidth: 600,
+            }}
+          >
             <div
               sx={{
-                width: 600,
                 p: 4,
               }}
             >
