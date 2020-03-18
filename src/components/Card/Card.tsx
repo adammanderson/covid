@@ -16,10 +16,12 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({
   action,
   fixed,
   centered,
+  extendStyle,
 }, ref) => (
   <TCard
     sx={{
       flex: fixed ? '0 0 auto' : '1 1 auto',
+      ...extendStyle,
     }}
   >
     <Corners />

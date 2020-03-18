@@ -29,7 +29,7 @@ const Modal: React.SFC<ModalProps> = ({
         >
           <Card
             fixed
-            sx={{
+            extendStyle={{
               flex: '0 1 600px',
               maxWidth: 600,
             }}

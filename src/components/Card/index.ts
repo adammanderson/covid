@@ -6,4 +6,5 @@ export interface CardProps {
   action?: React.ReactNode;
   fixed?: boolean;
   centered?: boolean;
+  extendStyle?: any;
 }
