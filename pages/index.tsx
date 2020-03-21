@@ -105,7 +105,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
                 title="Cases/deaths by country"
                 data={getCountryTotalsByDate(data)}
                 fixed
-                height={150}
+                height={180}
                 lines={[
                   {
                     dataKey: 'England',
