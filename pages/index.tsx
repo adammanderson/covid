@@ -49,7 +49,7 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
 
   return (
     <Shell>
-      <Modal isOpen>
+      <Modal isOpen={false}>
         <Heading sx={{ mb: 2 }}>Advisory Notice</Heading>
         <Text>
           Public Health England and the UK Government have declared that they will &quot;prioritise tests for people who needed hospital care for
@@ -80,6 +80,12 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
               subtitle={`// ${format(activeDate, 'EEEE dd LLLL Y, kk:mm')}`}
             />
             <Totaler
+              data={[
+                totalCases,
+                totalDeaths,
+              ]}
+            />
+            <Totaler
               data={totalsByCountry}
             />
           </Flex>
@@ -95,14 +101,6 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
                 flexBasis: ['auto', '350px'],
               }}
             >
-              <Totaler
-                title="Latest cases"
-                fixed
-                data={[
-                  totalCases,
-                  totalDeaths,
-                ]}
-              />
               <Bar
                 title="Cases/deaths by country"
                 data={getCountryTotalsByDate(data)}
@@ -151,22 +149,22 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
                 ]}
               />
             </Flex>
+            <Flex
+              sx={{
+                flexDirection: 'column',
+                flexBasis: '350px',
+              }}
+            >
+              <DataList
+                title="by region"
+                data={getGroupedCases(data, 'regions')}
+              />
+              <DataList
+                title="by authority"
+                data={getGroupedCases(data, 'authorities')}
+              />
+            </Flex>
           </Flex>
-        </Flex>
-        <Flex
-          sx={{
-            flexDirection: 'column',
-            flexBasis: '350px',
-          }}
-        >
-          <DataList
-            title="by region"
-            data={getGroupedCases(data, 'regions')}
-          />
-          <DataList
-            title="by authority"
-            data={getGroupedCases(data, 'authorities')}
-          />
         </Flex>
       </Flex>
       <Flex

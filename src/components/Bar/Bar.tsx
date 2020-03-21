@@ -6,9 +6,11 @@ import {
   LineChart,
   Line,
   XAxis,
+  YAxis,
   Tooltip,
   Legend,
   ResponsiveContainer,
+  CartesianGrid,
 } from 'recharts';
 import { Card } from '../Card';
 import { BarProps } from '.';
@@ -43,16 +45,22 @@ const Bar: React.SFC<BarProps> = ({
         <LineChart
           data={data}
           margin={{
-            top: 10,
-            right: 40,
-            left: 40,
+            top: 20,
+            right: 30,
+            left: -10,
             bottom: 10,
           }}
         >
+          <CartesianGrid strokeDasharray="6 3" stroke="#011017" vertical={false} />
           <XAxis
             dataKey="name"
             tick={{
-              fontSize: '0.8em',
+              fontSize: '0.6em',
+            }}
+          />
+          <YAxis
+            tick={{
+              fontSize: '0.6em',
             }}
           />
           {legend && (
