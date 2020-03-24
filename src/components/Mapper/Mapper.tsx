@@ -54,7 +54,7 @@ const Mapper: React.FC<MapperProps> = ({
       style: (feature) => {
         const featureLabel = feature.properties.AUTH;
         const featureData = data.find((auth) => featureLabel.includes(auth.label));
-        const confirmedPerc = featureData && (featureData.value / 30);
+        const confirmedPerc = featureData && (featureData.value / 50);
         return {
           color: 'rgba(0, 0, 0, 0.4)',
           opacity: 1,
