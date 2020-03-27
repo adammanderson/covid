@@ -14,6 +14,7 @@ import {
   Mapper,
   Fetcher,
   Modal,
+  Card,
 } from '../src/components';
 import {
   fetchData,
@@ -27,7 +28,7 @@ import {
 const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
   const [loading, setLoading] = React.useState(false);
   const [data, setData] = React.useState(serverData);
-  const { created, countries } = data[data.length - 1];
+  const { created, countries, pending } = data[data.length - 1];
   const activeDate = new Date(created);
   const totalCases = { label: 'active', value: sumBy(getCountryTotals(data), 'confirmed') };
   const totalDeaths = { label: 'deaths', value: sumBy(getCountryTotals(data), 'deaths') };
@@ -101,6 +102,15 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
                 flexBasis: ['auto', '350px'],
               }}
             >
+              <Card
+                fixed
+                extendStyle={{
+                  p: 10,
+                  textAlign: 'center',
+                }}
+              >
+                {pending && <Text variant="small">Awaiting further data for this date.</Text>}
+              </Card>
               <Bar
                 title="Cases/deaths by country"
                 data={getCountryTotalsByDate(data)}

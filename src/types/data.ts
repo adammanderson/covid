@@ -1,5 +1,6 @@
 export interface DataAttributes {
   created: string;
+  pending?: boolean;
   countries: CountryAttributes[];
 }
 
