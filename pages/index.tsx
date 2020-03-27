@@ -102,15 +102,17 @@ const Home: NextPage<{ serverData: DataAttributes[]}> = ({ serverData }) => {
                 flexBasis: ['auto', '350px'],
               }}
             >
-              <Card
-                fixed
-                extendStyle={{
-                  p: 10,
-                  textAlign: 'center',
-                }}
-              >
-                {pending && <Text variant="small">Awaiting further data for this date.</Text>}
-              </Card>
+              {pending && (
+                <Card
+                  fixed
+                  extendStyle={{
+                    p: 10,
+                    textAlign: 'center',
+                  }}
+                >
+                  <Text variant="small">Awaiting further data for this date.</Text>
+                </Card>
+              )}
               <Bar
                 title="Cases/deaths by country"
                 data={getCountryTotalsByDate(data)}
