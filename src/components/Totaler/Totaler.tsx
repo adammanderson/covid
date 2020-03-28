@@ -13,7 +13,7 @@ const TotalerItem = ({ label, value, adjustment }: TotalerItemProps) => {
   return (
     <Flex
       sx={{
-        flex: '1 0 150px',
+        flex: '1 0 130px',
         display: 'flex',
         flexFlow: 'column',
         alignItems: 'center',
@@ -70,7 +70,7 @@ const Totaler: React.SFC<TotalerProps> = ({
     >
       <Flex
         sx={{
-          flexFlow: 'row wrap',
+          flexFlow: ['row wrap', 'row'],
           justifyContent: 'center',
         }}
       >

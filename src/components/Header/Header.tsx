@@ -17,7 +17,7 @@ const Header: React.SFC<HeaderProps> = ({
         textAlign: 'center',
       }}
     >
-      <Heading as="h1" sx={{ fontSize: 2, mb: 2 }}>{title}</Heading>
+      <Heading as="h1" sx={{ fontSize: 2, mb: 1 }}>{title}</Heading>
       {subtitle && <Text variant="small">{subtitle}</Text>}
     </Box>
   </Card>
